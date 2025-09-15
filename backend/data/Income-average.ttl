@@ -1,0 +1,1265 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<http://labs.datahub.kr/egs/administrativearea/51150> a schema:AdministrativeArea;
+schema:name "강원특별자치도 강릉시";
+schema:identifier "51150";
+schema:amount "35018";
+rdfs:label "강원특별자치도 강릉시" .
+<http://labs.datahub.kr/egs/administrativearea/51820> a schema:AdministrativeArea;
+schema:name "강원특별자치도 고성군";
+schema:identifier "51820";
+schema:amount "31809";
+rdfs:label "강원특별자치도 고성군" .
+<http://labs.datahub.kr/egs/administrativearea/51170> a schema:AdministrativeArea;
+schema:name "강원특별자치도 동해시";
+schema:identifier "51170";
+schema:amount "35129";
+rdfs:label "강원특별자치도 동해시" .
+<http://labs.datahub.kr/egs/administrativearea/51230> a schema:AdministrativeArea;
+schema:name "강원특별자치도 삼척시";
+schema:identifier "51230";
+schema:amount "33776";
+rdfs:label "강원특별자치도 삼척시" .
+<http://labs.datahub.kr/egs/administrativearea/51210> a schema:AdministrativeArea;
+schema:name "강원특별자치도 속초시";
+schema:identifier "51210";
+schema:amount "34745";
+rdfs:label "강원특별자치도 속초시" .
+<http://labs.datahub.kr/egs/administrativearea/51800> a schema:AdministrativeArea;
+schema:name "강원특별자치도 양구군";
+schema:identifier "51800";
+schema:amount "34708";
+rdfs:label "강원특별자치도 양구군" .
+<http://labs.datahub.kr/egs/administrativearea/51830> a schema:AdministrativeArea;
+schema:name "강원특별자치도 양양군";
+schema:identifier "51830";
+schema:amount "33520";
+rdfs:label "강원특별자치도 양양군" .
+<http://labs.datahub.kr/egs/administrativearea/51750> a schema:AdministrativeArea;
+schema:name "강원특별자치도 영월군";
+schema:identifier "51750";
+schema:amount "33325";
+rdfs:label "강원특별자치도 영월군" .
+<http://labs.datahub.kr/egs/administrativearea/51130> schema:identifier "51130";
+a schema:AdministrativeArea;
+schema:name "강원특별자치도 원주시";
+schema:amount "36329";
+rdfs:label "강원특별자치도 원주시" .
+<http://labs.datahub.kr/egs/administrativearea/51810> a schema:AdministrativeArea;
+schema:name "강원특별자치도 인제군";
+schema:identifier "51810";
+schema:amount "34549";
+rdfs:label "강원특별자치도 인제군" .
+<http://labs.datahub.kr/egs/administrativearea/51770> a schema:AdministrativeArea;
+schema:name "강원특별자치도 정선군";
+schema:identifier "51770";
+schema:amount "33473";
+rdfs:label "강원특별자치도 정선군" .
+<http://labs.datahub.kr/egs/administrativearea/51780> schema:amount "34525";
+schema:identifier "51780";
+schema:name "강원특별자치도 철원군";
+a schema:AdministrativeArea;
+rdfs:label "강원특별자치도 철원군" .
+<http://labs.datahub.kr/egs/administrativearea/51110> rdfs:label "강원특별자치도 춘천시";
+a schema:AdministrativeArea;
+schema:identifier "51110";
+schema:name "강원특별자치도 춘천시";
+schema:amount "35696" .
+<http://labs.datahub.kr/egs/administrativearea/51190> a schema:AdministrativeArea;
+schema:name "강원특별자치도 태백시";
+schema:identifier "51190";
+schema:amount "34237";
+rdfs:label "강원특별자치도 태백시" .
+<http://labs.datahub.kr/egs/administrativearea/51760> schema:identifier "51760";
+schema:amount "33733";
+a schema:AdministrativeArea;
+schema:name "강원특별자치도 평창군";
+rdfs:label "강원특별자치도 평창군" .
+<http://labs.datahub.kr/egs/administrativearea/51720> a schema:AdministrativeArea;
+schema:name "강원특별자치도 홍천군";
+schema:identifier "51720";
+schema:amount "33636";
+rdfs:label "강원특별자치도 홍천군" .
+<http://labs.datahub.kr/egs/administrativearea/51790> a schema:AdministrativeArea;
+schema:name "강원특별자치도 화천군";
+schema:identifier "51790";
+schema:amount "33748";
+rdfs:label "강원특별자치도 화천군" .
+<http://labs.datahub.kr/egs/administrativearea/51730> schema:name "강원특별자치도 횡성군";
+a schema:AdministrativeArea;
+schema:identifier "51730";
+schema:amount "33247";
+rdfs:label "강원특별자치도 횡성군" .
+<http://labs.datahub.kr/egs/administrativearea/41820> a schema:AdministrativeArea;
+schema:name "경기도 가평군";
+schema:identifier "41820";
+schema:amount "33823";
+rdfs:label "경기도 가평군" .
+<http://labs.datahub.kr/egs/administrativearea/41281> a schema:AdministrativeArea;
+schema:name "경기도 고양시 덕양구";
+schema:identifier "41281";
+schema:amount "38822";
+rdfs:label "경기도 고양시 덕양구" .
+<http://labs.datahub.kr/egs/administrativearea/41285> a schema:AdministrativeArea;
+schema:name "경기도 고양시 일산동구";
+schema:identifier "41285";
+schema:amount "41781";
+rdfs:label "경기도 고양시 일산동구" .
+<http://labs.datahub.kr/egs/administrativearea/41287> a schema:AdministrativeArea;
+schema:name "경기도 고양시 일산서구";
+schema:identifier "41287";
+schema:amount "40807";
+rdfs:label "경기도 고양시 일산서구" .
+<http://labs.datahub.kr/egs/administrativearea/41290> schema:name "경기도 과천시";
+a schema:AdministrativeArea;
+schema:identifier "41290";
+schema:amount "50809";
+rdfs:label "경기도 과천시" .
+<http://labs.datahub.kr/egs/administrativearea/41210> schema:name "경기도 광명시";
+a schema:AdministrativeArea;
+schema:identifier "41210";
+schema:amount "39232";
+rdfs:label "경기도 광명시" .
+<http://labs.datahub.kr/egs/administrativearea/41610> a schema:AdministrativeArea;
+schema:name "경기도 광주시";
+schema:identifier "41610";
+schema:amount "36630";
+rdfs:label "경기도 광주시" .
+<http://labs.datahub.kr/egs/administrativearea/41310> schema:name "경기도 구리시";
+a schema:AdministrativeArea;
+schema:identifier "41310";
+schema:amount "38163";
+rdfs:label "경기도 구리시" .
+<http://labs.datahub.kr/egs/administrativearea/41410> schema:name "경기도 군포시";
+schema:identifier "41410";
+rdfs:label "경기도 군포시";
+schema:amount "37899";
+a schema:AdministrativeArea .
+<http://labs.datahub.kr/egs/administrativearea/41570> a schema:AdministrativeArea;
+schema:name "경기도 김포시";
+schema:identifier "41570";
+schema:amount "39098";
+rdfs:label "경기도 김포시" .
+<http://labs.datahub.kr/egs/administrativearea/41360> schema:amount "37328";
+schema:identifier "41360";
+a schema:AdministrativeArea;
+schema:name "경기도 남양주시";
+rdfs:label "경기도 남양주시" .
+<http://labs.datahub.kr/egs/administrativearea/41250> schema:name "경기도 동두천시";
+schema:identifier "41250";
+a schema:AdministrativeArea;
+schema:amount "32144";
+rdfs:label "경기도 동두천시" .
+<http://labs.datahub.kr/egs/administrativearea/41194> a schema:AdministrativeArea;
+schema:name "경기도 부천시 소사구";
+schema:identifier "41194";
+schema:amount "35902";
+rdfs:label "경기도 부천시 소사구" .
+<http://labs.datahub.kr/egs/administrativearea/41196> a schema:AdministrativeArea;
+schema:name "경기도 부천시 오정구";
+schema:identifier "41196";
+schema:amount "33064";
+rdfs:label "경기도 부천시 오정구" .
+<http://labs.datahub.kr/egs/administrativearea/41192> schema:name "경기도 부천시 원미구";
+a schema:AdministrativeArea;
+schema:identifier "41192";
+schema:amount "37054";
+rdfs:label "경기도 부천시 원미구" .
+<http://labs.datahub.kr/egs/administrativearea/41135> schema:name "경기도 성남시 분당구";
+a schema:AdministrativeArea;
+schema:identifier "41135";
+schema:amount "54645";
+rdfs:label "경기도 성남시 분당구" .
+<http://labs.datahub.kr/egs/administrativearea/41131> a schema:AdministrativeArea;
+schema:name "경기도 성남시 수정구";
+schema:identifier "41131";
+schema:amount "36425";
+rdfs:label "경기도 성남시 수정구" .
+<http://labs.datahub.kr/egs/administrativearea/41133> schema:name "경기도 성남시 중원구";
+a schema:AdministrativeArea;
+schema:identifier "41133";
+schema:amount "35505";
+rdfs:label "경기도 성남시 중원구" .
+<http://labs.datahub.kr/egs/administrativearea/41113> a schema:AdministrativeArea;
+schema:name "경기도 수원시 권선구";
+schema:identifier "41113";
+schema:amount "37492";
+rdfs:label "경기도 수원시 권선구" .
+<http://labs.datahub.kr/egs/administrativearea/41117> schema:identifier "41117";
+schema:name "경기도 수원시 영통구";
+a schema:AdministrativeArea;
+schema:amount "47116";
+rdfs:label "경기도 수원시 영통구" .
+<http://labs.datahub.kr/egs/administrativearea/41111> a schema:AdministrativeArea;
+schema:name "경기도 수원시 장안구";
+schema:identifier "41111";
+schema:amount "37536";
+rdfs:label "경기도 수원시 장안구" .
+<http://labs.datahub.kr/egs/administrativearea/41115> a schema:AdministrativeArea;
+schema:name "경기도 수원시 팔달구";
+schema:identifier "41115";
+schema:amount "35917";
+rdfs:label "경기도 수원시 팔달구" .
+<http://labs.datahub.kr/egs/administrativearea/41390> rdfs:label "경기도 시흥시";
+schema:amount "35809";
+a schema:AdministrativeArea;
+schema:name "경기도 시흥시";
+schema:identifier "41390" .
+<http://labs.datahub.kr/egs/administrativearea/41273> a schema:AdministrativeArea;
+schema:name "경기도 안산시 단원구";
+schema:identifier "41273";
+schema:amount "34096";
+rdfs:label "경기도 안산시 단원구" .
+<http://labs.datahub.kr/egs/administrativearea/41271> a schema:AdministrativeArea;
+schema:name "경기도 안산시 상록구";
+schema:identifier "41271";
+schema:amount "34196";
+rdfs:label "경기도 안산시 상록구" .
+<http://labs.datahub.kr/egs/administrativearea/41550> a schema:AdministrativeArea;
+schema:name "경기도 안성시";
+schema:identifier "41550";
+schema:amount "34983";
+rdfs:label "경기도 안성시" .
+<http://labs.datahub.kr/egs/administrativearea/41173> schema:name "경기도 안양시 동안구";
+schema:identifier "41173";
+a schema:AdministrativeArea;
+schema:amount "43426";
+rdfs:label "경기도 안양시 동안구" .
+<http://labs.datahub.kr/egs/administrativearea/41171> a schema:AdministrativeArea;
+schema:name "경기도 안양시 만안구";
+schema:identifier "41171";
+schema:amount "36522";
+rdfs:label "경기도 안양시 만안구" .
+<http://labs.datahub.kr/egs/administrativearea/41630> a schema:AdministrativeArea;
+schema:name "경기도 양주시";
+schema:identifier "41630";
+schema:amount "34276";
+rdfs:label "경기도 양주시" .
+<http://labs.datahub.kr/egs/administrativearea/41830> a schema:AdministrativeArea;
+schema:name "경기도 양평군";
+schema:identifier "41830";
+schema:amount "36536";
+rdfs:label "경기도 양평군" .
+<http://labs.datahub.kr/egs/administrativearea/41670> a schema:AdministrativeArea;
+schema:name "경기도 여주시";
+schema:identifier "41670";
+schema:amount "34468";
+rdfs:label "경기도 여주시" .
+<http://labs.datahub.kr/egs/administrativearea/41800> a schema:AdministrativeArea;
+schema:name "경기도 연천군";
+schema:identifier "41800";
+schema:amount "33997";
+rdfs:label "경기도 연천군" .
+<http://labs.datahub.kr/egs/administrativearea/41370> a schema:AdministrativeArea;
+schema:name "경기도 오산시";
+schema:identifier "41370";
+schema:amount "37572";
+rdfs:label "경기도 오산시" .
+<http://labs.datahub.kr/egs/administrativearea/41463> a schema:AdministrativeArea;
+schema:name "경기도 용인시 기흥구";
+schema:identifier "41463";
+schema:amount "43070";
+rdfs:label "경기도 용인시 기흥구" .
+<http://labs.datahub.kr/egs/administrativearea/41465> a schema:AdministrativeArea;
+schema:name "경기도 용인시 수지구";
+schema:identifier "41465";
+schema:amount "49160";
+rdfs:label "경기도 용인시 수지구" .
+<http://labs.datahub.kr/egs/administrativearea/41461> schema:amount "36275";
+a schema:AdministrativeArea;
+schema:name "경기도 용인시 처인구";
+schema:identifier "41461";
+rdfs:label "경기도 용인시 처인구" .
+<http://labs.datahub.kr/egs/administrativearea/41430> a schema:AdministrativeArea;
+schema:name "경기도 의왕시";
+schema:identifier "41430";
+schema:amount "41091";
+rdfs:label "경기도 의왕시" .
+<http://labs.datahub.kr/egs/administrativearea/41150> schema:amount "34870";
+schema:identifier "41150";
+a schema:AdministrativeArea;
+schema:name "경기도 의정부시";
+rdfs:label "경기도 의정부시" .
+<http://labs.datahub.kr/egs/administrativearea/41500> schema:identifier "41500";
+schema:name "경기도 이천시";
+a schema:AdministrativeArea;
+schema:amount "38060";
+rdfs:label "경기도 이천시" .
+<http://labs.datahub.kr/egs/administrativearea/41480> schema:identifier "41480";
+schema:name "경기도 파주시";
+a schema:AdministrativeArea;
+schema:amount "37631";
+rdfs:label "경기도 파주시" .
+<http://labs.datahub.kr/egs/administrativearea/41220> a schema:AdministrativeArea;
+schema:name "경기도 평택시";
+schema:identifier "41220";
+schema:amount "37754";
+rdfs:label "경기도 평택시" .
+<http://labs.datahub.kr/egs/administrativearea/41650> a schema:AdministrativeArea;
+schema:name "경기도 포천시";
+schema:identifier "41650";
+schema:amount "32557";
+rdfs:label "경기도 포천시" .
+<http://labs.datahub.kr/egs/administrativearea/41450> a schema:AdministrativeArea;
+schema:name "경기도 하남시";
+schema:identifier "41450";
+schema:amount "42410";
+rdfs:label "경기도 하남시" .
+<http://labs.datahub.kr/egs/administrativearea/41590> a schema:AdministrativeArea;
+schema:name "경기도 화성시";
+schema:identifier "41590";
+schema:amount "42860";
+rdfs:label "경기도 화성시" .
+<http://labs.datahub.kr/egs/administrativearea/48310> a schema:AdministrativeArea;
+schema:name "경상남도 거제시";
+schema:identifier "48310";
+schema:amount "39000";
+rdfs:label "경상남도 거제시" .
+<http://labs.datahub.kr/egs/administrativearea/48880> a schema:AdministrativeArea;
+schema:name "경상남도 거창군";
+schema:identifier "48880";
+schema:amount "34096";
+rdfs:label "경상남도 거창군" .
+<http://labs.datahub.kr/egs/administrativearea/48820> a schema:AdministrativeArea;
+schema:name "경상남도 고성군";
+schema:identifier "48820";
+schema:amount "33880";
+rdfs:label "경상남도 고성군" .
+<http://labs.datahub.kr/egs/administrativearea/48250> a schema:AdministrativeArea;
+schema:name "경상남도 김해시";
+schema:identifier "48250";
+schema:amount "36556";
+rdfs:label "경상남도 김해시" .
+<http://labs.datahub.kr/egs/administrativearea/48840> a schema:AdministrativeArea;
+schema:name "경상남도 남해군";
+schema:identifier "48840";
+schema:amount "31710";
+rdfs:label "경상남도 남해군" .
+<http://labs.datahub.kr/egs/administrativearea/48270> a schema:AdministrativeArea;
+schema:name "경상남도 밀양시";
+schema:identifier "48270";
+schema:amount "32852";
+rdfs:label "경상남도 밀양시" .
+<http://labs.datahub.kr/egs/administrativearea/48240> a schema:AdministrativeArea;
+schema:name "경상남도 사천시";
+schema:identifier "48240";
+schema:amount "35354";
+rdfs:label "경상남도 사천시" .
+<http://labs.datahub.kr/egs/administrativearea/48860> a schema:AdministrativeArea;
+schema:name "경상남도 산청군";
+schema:identifier "48860";
+schema:amount "32799";
+rdfs:label "경상남도 산청군" .
+<http://labs.datahub.kr/egs/administrativearea/48330> a schema:AdministrativeArea;
+schema:name "경상남도 양산시";
+schema:identifier "48330";
+schema:amount "36086";
+rdfs:label "경상남도 양산시" .
+<http://labs.datahub.kr/egs/administrativearea/48720> a schema:AdministrativeArea;
+schema:name "경상남도 의령군";
+schema:identifier "48720";
+schema:amount "32498";
+rdfs:label "경상남도 의령군" .
+<http://labs.datahub.kr/egs/administrativearea/48170> a schema:AdministrativeArea;
+schema:name "경상남도 진주시";
+schema:identifier "48170";
+schema:amount "36815";
+rdfs:label "경상남도 진주시" .
+<http://labs.datahub.kr/egs/administrativearea/48740> rdfs:label "경상남도 창녕군";
+schema:amount "33080";
+schema:identifier "48740";
+schema:name "경상남도 창녕군";
+a schema:AdministrativeArea .
+<http://labs.datahub.kr/egs/administrativearea/48125> schema:name "경상남도 창원시 마산합포구";
+a schema:AdministrativeArea;
+schema:identifier "48125";
+schema:amount "34870";
+rdfs:label "경상남도 창원시 마산합포구" .
+<http://labs.datahub.kr/egs/administrativearea/48127> a schema:AdministrativeArea;
+schema:name "경상남도 창원시 마산회원구";
+schema:identifier "48127";
+schema:amount "35183";
+rdfs:label "경상남도 창원시 마산회원구" .
+<http://labs.datahub.kr/egs/administrativearea/48123> a schema:AdministrativeArea;
+schema:name "경상남도 창원시 성산구";
+schema:identifier "48123";
+schema:amount "41899";
+rdfs:label "경상남도 창원시 성산구" .
+<http://labs.datahub.kr/egs/administrativearea/48121> a schema:AdministrativeArea;
+schema:name "경상남도 창원시 의창구";
+schema:identifier "48121";
+schema:amount "36570";
+rdfs:label "경상남도 창원시 의창구" .
+<http://labs.datahub.kr/egs/administrativearea/48129> schema:identifier "48129";
+schema:amount "37234";
+schema:name "경상남도 창원시 진해구";
+a schema:AdministrativeArea;
+rdfs:label "경상남도 창원시 진해구" .
+<http://labs.datahub.kr/egs/administrativearea/48220> a schema:AdministrativeArea;
+schema:name "경상남도 통영시";
+schema:identifier "48220";
+schema:amount "33810";
+rdfs:label "경상남도 통영시" .
+<http://labs.datahub.kr/egs/administrativearea/48850> a schema:AdministrativeArea;
+schema:name "경상남도 하동군";
+schema:identifier "48850";
+schema:amount "32387";
+rdfs:label "경상남도 하동군" .
+<http://labs.datahub.kr/egs/administrativearea/48730> a schema:AdministrativeArea;
+schema:name "경상남도 함안군";
+schema:identifier "48730";
+schema:amount "34103";
+rdfs:label "경상남도 함안군" .
+<http://labs.datahub.kr/egs/administrativearea/48870> a schema:AdministrativeArea;
+schema:name "경상남도 함양군";
+schema:identifier "48870";
+schema:amount "32945";
+rdfs:label "경상남도 함양군" .
+<http://labs.datahub.kr/egs/administrativearea/48890> a schema:AdministrativeArea;
+schema:name "경상남도 합천군";
+schema:identifier "48890";
+schema:amount "32302";
+rdfs:label "경상남도 합천군" .
+<http://labs.datahub.kr/egs/administrativearea/47290> a schema:AdministrativeArea;
+schema:name "경상북도 경산시";
+schema:identifier "47290";
+schema:amount "32716";
+rdfs:label "경상북도 경산시" .
+<http://labs.datahub.kr/egs/administrativearea/47130> a schema:AdministrativeArea;
+schema:name "경상북도 경주시";
+schema:identifier "47130";
+schema:amount "34789";
+rdfs:label "경상북도 경주시" .
+<http://labs.datahub.kr/egs/administrativearea/47830> a schema:AdministrativeArea;
+schema:name "경상북도 고령군";
+schema:identifier "47830";
+schema:amount "32535";
+rdfs:label "경상북도 고령군" .
+<http://labs.datahub.kr/egs/administrativearea/47190> schema:amount "37969";
+schema:name "경상북도 구미시";
+a schema:AdministrativeArea;
+schema:identifier "47190";
+rdfs:label "경상북도 구미시" .
+<http://labs.datahub.kr/egs/administrativearea/47150> a schema:AdministrativeArea;
+schema:name "경상북도 김천시";
+schema:identifier "47150";
+schema:amount "35350";
+rdfs:label "경상북도 김천시" .
+<http://labs.datahub.kr/egs/administrativearea/47280> a schema:AdministrativeArea;
+schema:name "경상북도 문경시";
+schema:identifier "47280";
+schema:amount "33276";
+rdfs:label "경상북도 문경시" .
+<http://labs.datahub.kr/egs/administrativearea/47920> a schema:AdministrativeArea;
+schema:name "경상북도 봉화군";
+schema:identifier "47920";
+schema:amount "32861";
+rdfs:label "경상북도 봉화군" .
+<http://labs.datahub.kr/egs/administrativearea/47250> schema:name "경상북도 상주시";
+a schema:AdministrativeArea;
+schema:identifier "47250";
+schema:amount "33015";
+rdfs:label "경상북도 상주시" .
+<http://labs.datahub.kr/egs/administrativearea/47840> schema:amount "32550";
+schema:identifier "47840";
+a schema:AdministrativeArea;
+schema:name "경상북도 성주군";
+rdfs:label "경상북도 성주군" .
+<http://labs.datahub.kr/egs/administrativearea/47170> rdfs:label "경상북도 안동시";
+schema:identifier "47170";
+schema:name "경상북도 안동시";
+a schema:AdministrativeArea;
+schema:amount "34266" .
+<http://labs.datahub.kr/egs/administrativearea/47770> schema:amount "31186";
+schema:identifier "47770";
+schema:name "경상북도 영덕군";
+a schema:AdministrativeArea;
+rdfs:label "경상북도 영덕군" .
+<http://labs.datahub.kr/egs/administrativearea/47760> schema:amount "32009";
+schema:identifier "47760";
+schema:name "경상북도 영양군";
+a schema:AdministrativeArea;
+rdfs:label "경상북도 영양군" .
+<http://labs.datahub.kr/egs/administrativearea/47210> a schema:AdministrativeArea;
+schema:name "경상북도 영주시";
+schema:identifier "47210";
+schema:amount "34202";
+rdfs:label "경상북도 영주시" .
+<http://labs.datahub.kr/egs/administrativearea/47230> schema:name "경상북도 영천시";
+rdfs:label "경상북도 영천시";
+schema:amount "33023";
+a schema:AdministrativeArea;
+schema:identifier "47230" .
+<http://labs.datahub.kr/egs/administrativearea/47900> a schema:AdministrativeArea;
+schema:amount "35624";
+schema:name "경상북도 예천군";
+schema:identifier "47900";
+rdfs:label "경상북도 예천군" .
+<http://labs.datahub.kr/egs/administrativearea/47940> a schema:AdministrativeArea;
+schema:name "경상북도 울릉군";
+schema:identifier "47940";
+schema:amount "34679";
+rdfs:label "경상북도 울릉군" .
+<http://labs.datahub.kr/egs/administrativearea/47930> schema:amount "34748";
+schema:name "경상북도 울진군";
+a schema:AdministrativeArea;
+schema:identifier "47930";
+rdfs:label "경상북도 울진군" .
+<http://labs.datahub.kr/egs/administrativearea/47730> a schema:AdministrativeArea;
+schema:name "경상북도 의성군";
+schema:identifier "47730";
+schema:amount "31420";
+rdfs:label "경상북도 의성군" .
+<http://labs.datahub.kr/egs/administrativearea/47820> a schema:AdministrativeArea;
+schema:name "경상북도 청도군";
+schema:identifier "47820";
+schema:amount "32509";
+rdfs:label "경상북도 청도군" .
+<http://labs.datahub.kr/egs/administrativearea/47750> a schema:AdministrativeArea;
+schema:name "경상북도 청송군";
+schema:identifier "47750";
+schema:amount "32397";
+rdfs:label "경상북도 청송군" .
+<http://labs.datahub.kr/egs/administrativearea/47850> schema:name "경상북도 칠곡군";
+a schema:AdministrativeArea;
+schema:identifier "47850";
+schema:amount "34854";
+rdfs:label "경상북도 칠곡군" .
+<http://labs.datahub.kr/egs/administrativearea/47111> a schema:AdministrativeArea;
+schema:name "경상북도 포항시 남구";
+schema:identifier "47111";
+schema:amount "37739";
+rdfs:label "경상북도 포항시 남구" .
+<http://labs.datahub.kr/egs/administrativearea/47113> a schema:AdministrativeArea;
+schema:name "경상북도 포항시 북구";
+schema:identifier "47113";
+schema:amount "37109";
+rdfs:label "경상북도 포항시 북구" .
+<http://labs.datahub.kr/egs/administrativearea/29200> a schema:AdministrativeArea;
+schema:name "광주광역시 광산구";
+schema:identifier "29200";
+schema:amount "36558";
+rdfs:label "광주광역시 광산구" .
+<http://labs.datahub.kr/egs/administrativearea/29155> a schema:AdministrativeArea;
+schema:name "광주광역시 남구";
+schema:identifier "29155";
+schema:amount "38353";
+rdfs:label "광주광역시 남구" .
+<http://labs.datahub.kr/egs/administrativearea/29110> schema:name "광주광역시 동구";
+a schema:AdministrativeArea;
+schema:identifier "29110";
+schema:amount "37394";
+rdfs:label "광주광역시 동구" .
+<http://labs.datahub.kr/egs/administrativearea/29170> a schema:AdministrativeArea;
+schema:name "광주광역시 북구";
+schema:identifier "29170";
+schema:amount "35713";
+rdfs:label "광주광역시 북구" .
+<http://labs.datahub.kr/egs/administrativearea/29140> a schema:AdministrativeArea;
+schema:name "광주광역시 서구";
+schema:identifier "29140";
+schema:amount "38180";
+rdfs:label "광주광역시 서구" .
+<http://labs.datahub.kr/egs/administrativearea/27720> a schema:AdministrativeArea;
+schema:name "대구광역시 군위군";
+schema:identifier "27720";
+schema:amount "32262";
+rdfs:label "대구광역시 군위군" .
+<http://labs.datahub.kr/egs/administrativearea/27200> a schema:AdministrativeArea;
+schema:name "대구광역시 남구";
+schema:identifier "27200";
+schema:amount "32089";
+rdfs:label "대구광역시 남구" .
+<http://labs.datahub.kr/egs/administrativearea/27290> a schema:AdministrativeArea;
+schema:name "대구광역시 달서구";
+schema:identifier "27290";
+schema:amount "35535";
+rdfs:label "대구광역시 달서구" .
+<http://labs.datahub.kr/egs/administrativearea/27710> schema:name "대구광역시 달성군";
+a schema:AdministrativeArea;
+schema:identifier "27710";
+schema:amount "35971";
+rdfs:label "대구광역시 달성군" .
+<http://labs.datahub.kr/egs/administrativearea/27140> schema:name "대구광역시 동구";
+a schema:AdministrativeArea;
+schema:identifier "27140";
+schema:amount "34978";
+rdfs:label "대구광역시 동구" .
+<http://labs.datahub.kr/egs/administrativearea/27230> a schema:AdministrativeArea;
+schema:name "대구광역시 북구";
+schema:identifier "27230";
+schema:amount "34626";
+rdfs:label "대구광역시 북구" .
+<http://labs.datahub.kr/egs/administrativearea/27170> a schema:AdministrativeArea;
+schema:name "대구광역시 서구";
+schema:identifier "27170";
+schema:amount "31453";
+rdfs:label "대구광역시 서구" .
+<http://labs.datahub.kr/egs/administrativearea/27260> schema:identifier "27260";
+schema:name "대구광역시 수성구";
+a schema:AdministrativeArea;
+schema:amount "43251";
+rdfs:label "대구광역시 수성구" .
+<http://labs.datahub.kr/egs/administrativearea/27110> schema:name "대구광역시 중구";
+a schema:AdministrativeArea;
+schema:identifier "27110";
+schema:amount "37960";
+rdfs:label "대구광역시 중구" .
+<http://labs.datahub.kr/egs/administrativearea/30230> schema:name "대전광역시 대덕구";
+a schema:AdministrativeArea;
+schema:identifier "30230";
+schema:amount "34364";
+rdfs:label "대전광역시 대덕구" .
+<http://labs.datahub.kr/egs/administrativearea/30110> a schema:AdministrativeArea;
+schema:name "대전광역시 동구";
+schema:identifier "30110";
+schema:amount "32105";
+rdfs:label "대전광역시 동구" .
+<http://labs.datahub.kr/egs/administrativearea/30170> a schema:AdministrativeArea;
+schema:name "대전광역시 서구";
+schema:identifier "30170";
+schema:amount "37799";
+rdfs:label "대전광역시 서구" .
+<http://labs.datahub.kr/egs/administrativearea/30200> a schema:AdministrativeArea;
+schema:name "대전광역시 유성구";
+schema:identifier "30200";
+schema:amount "42422";
+rdfs:label "대전광역시 유성구" .
+<http://labs.datahub.kr/egs/administrativearea/30140> schema:name "대전광역시 중구";
+schema:identifier "30140";
+a schema:AdministrativeArea;
+schema:amount "35355";
+rdfs:label "대전광역시 중구" .
+<http://labs.datahub.kr/egs/administrativearea/26440> schema:name "부산광역시 강서구";
+schema:identifier "26440";
+a schema:AdministrativeArea;
+schema:amount "41040";
+rdfs:label "부산광역시 강서구" .
+<http://labs.datahub.kr/egs/administrativearea/26410> a schema:AdministrativeArea;
+schema:name "부산광역시 금정구";
+schema:identifier "26410";
+schema:amount "34763";
+rdfs:label "부산광역시 금정구" .
+<http://labs.datahub.kr/egs/administrativearea/26710> a schema:AdministrativeArea;
+schema:name "부산광역시 기장군";
+schema:identifier "26710";
+schema:amount "36500";
+rdfs:label "부산광역시 기장군" .
+<http://labs.datahub.kr/egs/administrativearea/26290> a schema:AdministrativeArea;
+schema:name "부산광역시 남구";
+schema:identifier "26290";
+schema:amount "36638";
+rdfs:label "부산광역시 남구" .
+<http://labs.datahub.kr/egs/administrativearea/26170> a schema:AdministrativeArea;
+schema:name "부산광역시 동구";
+schema:identifier "26170";
+schema:amount "32916";
+rdfs:label "부산광역시 동구" .
+<http://labs.datahub.kr/egs/administrativearea/26260> a schema:AdministrativeArea;
+schema:name "부산광역시 동래구";
+schema:identifier "26260";
+schema:amount "38474";
+rdfs:label "부산광역시 동래구" .
+<http://labs.datahub.kr/egs/administrativearea/26230> a schema:AdministrativeArea;
+schema:name "부산광역시 부산진구";
+schema:identifier "26230";
+schema:amount "34328";
+rdfs:label "부산광역시 부산진구" .
+<http://labs.datahub.kr/egs/administrativearea/26320> a schema:AdministrativeArea;
+schema:name "부산광역시 북구";
+schema:identifier "26320";
+schema:amount "35073";
+rdfs:label "부산광역시 북구" .
+<http://labs.datahub.kr/egs/administrativearea/26530> schema:name "부산광역시 사상구";
+a schema:AdministrativeArea;
+schema:identifier "26530";
+schema:amount "32501";
+rdfs:label "부산광역시 사상구" .
+<http://labs.datahub.kr/egs/administrativearea/26380> a schema:AdministrativeArea;
+schema:name "부산광역시 사하구";
+schema:identifier "26380";
+schema:amount "33800";
+rdfs:label "부산광역시 사하구" .
+<http://labs.datahub.kr/egs/administrativearea/26140> a schema:AdministrativeArea;
+schema:name "부산광역시 서구";
+schema:identifier "26140";
+schema:amount "33555";
+rdfs:label "부산광역시 서구" .
+<http://labs.datahub.kr/egs/administrativearea/26500> schema:identifier "26500";
+a schema:AdministrativeArea;
+schema:name "부산광역시 수영구";
+schema:amount "36107";
+rdfs:label "부산광역시 수영구" .
+<http://labs.datahub.kr/egs/administrativearea/26470> a schema:AdministrativeArea;
+schema:name "부산광역시 연제구";
+schema:identifier "26470";
+schema:amount "36751";
+rdfs:label "부산광역시 연제구" .
+<http://labs.datahub.kr/egs/administrativearea/26200> a schema:AdministrativeArea;
+schema:name "부산광역시 영도구";
+schema:identifier "26200";
+schema:amount "31524";
+rdfs:label "부산광역시 영도구" .
+<http://labs.datahub.kr/egs/administrativearea/26110> schema:name "부산광역시 중구";
+a schema:AdministrativeArea;
+schema:identifier "26110";
+schema:amount "31002";
+rdfs:label "부산광역시 중구" .
+<http://labs.datahub.kr/egs/administrativearea/26350> schema:name "부산광역시 해운대구";
+schema:identifier "26350";
+a schema:AdministrativeArea;
+schema:amount "41995";
+rdfs:label "부산광역시 해운대구" .
+<http://labs.datahub.kr/egs/administrativearea/11680> a schema:AdministrativeArea;
+schema:name "서울특별시 강남구";
+schema:identifier "11680";
+schema:amount "61055";
+rdfs:label "서울특별시 강남구" .
+<http://labs.datahub.kr/egs/administrativearea/11740> schema:name "서울특별시 강동구";
+a schema:AdministrativeArea;
+schema:identifier "11740";
+schema:amount "40331";
+rdfs:label "서울특별시 강동구" .
+<http://labs.datahub.kr/egs/administrativearea/11305> a schema:AdministrativeArea;
+schema:name "서울특별시 강북구";
+schema:identifier "11305";
+schema:amount "33473";
+rdfs:label "서울특별시 강북구" .
+<http://labs.datahub.kr/egs/administrativearea/11500> a schema:AdministrativeArea;
+schema:name "서울특별시 강서구";
+schema:identifier "11500";
+schema:amount "38960";
+rdfs:label "서울특별시 강서구" .
+<http://labs.datahub.kr/egs/administrativearea/11620> a schema:AdministrativeArea;
+schema:name "서울특별시 관악구";
+schema:identifier "11620";
+schema:amount "34745";
+rdfs:label "서울특별시 관악구" .
+<http://labs.datahub.kr/egs/administrativearea/11215> a schema:AdministrativeArea;
+schema:name "서울특별시 광진구";
+schema:identifier "11215";
+schema:amount "37463";
+rdfs:label "서울특별시 광진구" .
+<http://labs.datahub.kr/egs/administrativearea/11530> a schema:AdministrativeArea;
+schema:name "서울특별시 구로구";
+schema:identifier "11530";
+schema:amount "35268";
+rdfs:label "서울특별시 구로구" .
+<http://labs.datahub.kr/egs/administrativearea/11545> schema:name "서울특별시 금천구";
+a schema:AdministrativeArea;
+schema:identifier "11545";
+schema:amount "33579";
+rdfs:label "서울특별시 금천구" .
+<http://labs.datahub.kr/egs/administrativearea/11350> schema:name "서울특별시 노원구";
+a schema:AdministrativeArea;
+schema:identifier "11350";
+schema:amount "37651";
+rdfs:label "서울특별시 노원구" .
+<http://labs.datahub.kr/egs/administrativearea/11320> a schema:AdministrativeArea;
+schema:name "서울특별시 도봉구";
+schema:identifier "11320";
+schema:amount "35241";
+rdfs:label "서울특별시 도봉구" .
+<http://labs.datahub.kr/egs/administrativearea/11230> a schema:AdministrativeArea;
+schema:name "서울특별시 동대문구";
+schema:identifier "11230";
+schema:amount "35049";
+rdfs:label "서울특별시 동대문구" .
+<http://labs.datahub.kr/egs/administrativearea/11590> a schema:AdministrativeArea;
+schema:name "서울특별시 동작구";
+schema:identifier "11590";
+schema:amount "39242";
+rdfs:label "서울특별시 동작구" .
+<http://labs.datahub.kr/egs/administrativearea/11440> schema:name "서울특별시 마포구";
+a schema:AdministrativeArea;
+schema:identifier "11440";
+schema:amount "41698";
+rdfs:label "서울특별시 마포구" .
+<http://labs.datahub.kr/egs/administrativearea/11410> a schema:AdministrativeArea;
+schema:name "서울특별시 서대문구";
+schema:identifier "11410";
+schema:amount "37558";
+rdfs:label "서울특별시 서대문구" .
+<http://labs.datahub.kr/egs/administrativearea/11650> a schema:AdministrativeArea;
+schema:name "서울특별시 서초구";
+schema:identifier "11650";
+schema:amount "60725";
+rdfs:label "서울특별시 서초구" .
+<http://labs.datahub.kr/egs/administrativearea/11200> a schema:AdministrativeArea;
+schema:name "서울특별시 성동구";
+schema:identifier "11200";
+schema:amount "42998";
+rdfs:label "서울특별시 성동구" .
+<http://labs.datahub.kr/egs/administrativearea/11290> a schema:AdministrativeArea;
+schema:name "서울특별시 성북구";
+schema:identifier "11290";
+schema:amount "37992";
+rdfs:label "서울특별시 성북구" .
+<http://labs.datahub.kr/egs/administrativearea/11710> a schema:AdministrativeArea;
+schema:name "서울특별시 송파구";
+schema:identifier "11710";
+schema:amount "47023";
+rdfs:label "서울특별시 송파구" .
+<http://labs.datahub.kr/egs/administrativearea/11470> a schema:AdministrativeArea;
+schema:name "서울특별시 양천구";
+schema:identifier "11470";
+schema:amount "43402";
+rdfs:label "서울특별시 양천구" .
+<http://labs.datahub.kr/egs/administrativearea/11560> a schema:AdministrativeArea;
+schema:name "서울특별시 영등포구";
+schema:identifier "11560";
+schema:amount "40385";
+rdfs:label "서울특별시 영등포구" .
+<http://labs.datahub.kr/egs/administrativearea/11170> a schema:AdministrativeArea;
+schema:name "서울특별시 용산구";
+schema:identifier "11170";
+schema:amount "67397";
+rdfs:label "서울특별시 용산구" .
+<http://labs.datahub.kr/egs/administrativearea/11380> a schema:AdministrativeArea;
+schema:name "서울특별시 은평구";
+schema:identifier "11380";
+schema:amount "36667";
+rdfs:label "서울특별시 은평구" .
+<http://labs.datahub.kr/egs/administrativearea/11110> a schema:AdministrativeArea;
+schema:name "서울특별시 종로구";
+schema:identifier "11110";
+schema:amount "40324";
+rdfs:label "서울특별시 종로구" .
+<http://labs.datahub.kr/egs/administrativearea/11140> a schema:AdministrativeArea;
+schema:name "서울특별시 중구";
+schema:identifier "11140";
+schema:amount "39523";
+rdfs:label "서울특별시 중구" .
+<http://labs.datahub.kr/egs/administrativearea/11260> a schema:AdministrativeArea;
+schema:name "서울특별시 중랑구";
+schema:identifier "11260";
+schema:amount "34563";
+rdfs:label "서울특별시 중랑구" .
+<http://labs.datahub.kr/egs/administrativearea/36110> a schema:AdministrativeArea;
+schema:name "없음(세종시)";
+schema:identifier "36110";
+schema:amount "43192";
+rdfs:label "없음(세종시)" .
+<http://labs.datahub.kr/egs/administrativearea/31140> a schema:AdministrativeArea;
+schema:name "울산광역시 남구";
+schema:identifier "31140";
+schema:amount "41389";
+rdfs:label "울산광역시 남구" .
+<http://labs.datahub.kr/egs/administrativearea/31170> a schema:AdministrativeArea;
+schema:name "울산광역시 동구";
+schema:identifier "31170";
+schema:amount "38129";
+rdfs:label "울산광역시 동구" .
+<http://labs.datahub.kr/egs/administrativearea/31200> a schema:AdministrativeArea;
+schema:name "울산광역시 북구";
+schema:identifier "31200";
+schema:amount "42446";
+rdfs:label "울산광역시 북구" .
+<http://labs.datahub.kr/egs/administrativearea/31710> a schema:AdministrativeArea;
+schema:name "울산광역시 울주군";
+schema:identifier "31710";
+schema:amount "38049";
+rdfs:label "울산광역시 울주군" .
+<http://labs.datahub.kr/egs/administrativearea/31110> schema:identifier "31110";
+schema:name "울산광역시 중구";
+a schema:AdministrativeArea;
+schema:amount "39562";
+rdfs:label "울산광역시 중구" .
+<http://labs.datahub.kr/egs/administrativearea/28710> a schema:AdministrativeArea;
+schema:name "인천광역시 강화군";
+schema:identifier "28710";
+schema:amount "33328";
+rdfs:label "인천광역시 강화군" .
+<http://labs.datahub.kr/egs/administrativearea/28245> a schema:AdministrativeArea;
+schema:name "인천광역시 계양구";
+schema:identifier "28245";
+schema:amount "34488";
+rdfs:label "인천광역시 계양구" .
+<http://labs.datahub.kr/egs/administrativearea/28200> a schema:AdministrativeArea;
+schema:name "인천광역시 남동구";
+schema:identifier "28200";
+schema:amount "35468";
+rdfs:label "인천광역시 남동구" .
+<http://labs.datahub.kr/egs/administrativearea/28140> a schema:AdministrativeArea;
+schema:name "인천광역시 동구";
+schema:identifier "28140";
+schema:amount "33499";
+rdfs:label "인천광역시 동구" .
+<http://labs.datahub.kr/egs/administrativearea/28177> a schema:AdministrativeArea;
+schema:name "인천광역시 미추홀구";
+schema:identifier "28177";
+schema:amount "33592";
+rdfs:label "인천광역시 미추홀구" .
+<http://labs.datahub.kr/egs/administrativearea/28237> a schema:AdministrativeArea;
+schema:name "인천광역시 부평구";
+schema:identifier "28237";
+schema:amount "35102";
+rdfs:label "인천광역시 부평구" .
+<http://labs.datahub.kr/egs/administrativearea/28260> a schema:AdministrativeArea;
+schema:name "인천광역시 서구";
+schema:identifier "28260";
+schema:amount "37976";
+rdfs:label "인천광역시 서구" .
+<http://labs.datahub.kr/egs/administrativearea/28185> schema:identifier "28185";
+schema:name "인천광역시 연수구";
+a schema:AdministrativeArea;
+schema:amount "43131";
+rdfs:label "인천광역시 연수구" .
+<http://labs.datahub.kr/egs/administrativearea/28720> a schema:AdministrativeArea;
+schema:name "인천광역시 옹진군";
+schema:identifier "28720";
+schema:amount "33398";
+rdfs:label "인천광역시 옹진군" .
+<http://labs.datahub.kr/egs/administrativearea/28110> a schema:AdministrativeArea;
+schema:name "인천광역시 중구";
+schema:identifier "28110";
+schema:amount "37755";
+rdfs:label "인천광역시 중구" .
+<http://labs.datahub.kr/egs/administrativearea/46810> a schema:AdministrativeArea;
+schema:name "전라남도 강진군";
+schema:identifier "46810";
+schema:amount "32714";
+rdfs:label "전라남도 강진군" .
+<http://labs.datahub.kr/egs/administrativearea/46770> a schema:AdministrativeArea;
+schema:name "전라남도 고흥군";
+schema:identifier "46770";
+schema:amount "31062";
+rdfs:label "전라남도 고흥군" .
+<http://labs.datahub.kr/egs/administrativearea/46720> a schema:AdministrativeArea;
+schema:name "전라남도 곡성군";
+schema:identifier "46720";
+schema:amount "32855";
+rdfs:label "전라남도 곡성군" .
+<http://labs.datahub.kr/egs/administrativearea/46230> a schema:AdministrativeArea;
+schema:name "전라남도 광양시";
+schema:identifier "46230";
+schema:amount "39134";
+rdfs:label "전라남도 광양시" .
+<http://labs.datahub.kr/egs/administrativearea/46730> a schema:AdministrativeArea;
+schema:name "전라남도 구례군";
+schema:identifier "46730";
+schema:amount "32603";
+rdfs:label "전라남도 구례군" .
+<http://labs.datahub.kr/egs/administrativearea/46170> a schema:AdministrativeArea;
+schema:name "전라남도 나주시";
+schema:identifier "46170";
+schema:amount "35782";
+rdfs:label "전라남도 나주시" .
+<http://labs.datahub.kr/egs/administrativearea/46710> a schema:AdministrativeArea;
+schema:name "전라남도 담양군";
+schema:identifier "46710";
+schema:amount "34577";
+rdfs:label "전라남도 담양군" .
+<http://labs.datahub.kr/egs/administrativearea/46110> a schema:AdministrativeArea;
+schema:name "전라남도 목포시";
+schema:identifier "46110";
+schema:amount "34438";
+rdfs:label "전라남도 목포시" .
+<http://labs.datahub.kr/egs/administrativearea/46840> schema:name "전라남도 무안군";
+a schema:AdministrativeArea;
+schema:identifier "46840";
+schema:amount "36027";
+rdfs:label "전라남도 무안군" .
+<http://labs.datahub.kr/egs/administrativearea/46780> schema:name "전라남도 보성군";
+schema:identifier "46780";
+a schema:AdministrativeArea;
+schema:amount "31683";
+rdfs:label "전라남도 보성군" .
+<http://labs.datahub.kr/egs/administrativearea/46150> a schema:AdministrativeArea;
+schema:name "전라남도 순천시";
+schema:identifier "46150";
+schema:amount "37747";
+rdfs:label "전라남도 순천시" .
+<http://labs.datahub.kr/egs/administrativearea/46910> a schema:AdministrativeArea;
+schema:name "전라남도 신안군";
+schema:identifier "46910";
+schema:amount "31392";
+rdfs:label "전라남도 신안군" .
+<http://labs.datahub.kr/egs/administrativearea/46130> a schema:AdministrativeArea;
+schema:name "전라남도 여수시";
+schema:identifier "46130";
+schema:amount "37683";
+rdfs:label "전라남도 여수시" .
+<http://labs.datahub.kr/egs/administrativearea/46870> a schema:AdministrativeArea;
+schema:name "전라남도 영광군";
+schema:identifier "46870";
+schema:amount "33910";
+rdfs:label "전라남도 영광군" .
+<http://labs.datahub.kr/egs/administrativearea/46830> a schema:AdministrativeArea;
+schema:name "전라남도 영암군";
+schema:identifier "46830";
+schema:amount "33318";
+rdfs:label "전라남도 영암군" .
+<http://labs.datahub.kr/egs/administrativearea/46890> a schema:AdministrativeArea;
+schema:name "전라남도 완도군";
+schema:identifier "46890";
+schema:amount "31991";
+rdfs:label "전라남도 완도군" .
+<http://labs.datahub.kr/egs/administrativearea/46880> a schema:AdministrativeArea;
+schema:name "전라남도 장성군";
+schema:identifier "46880";
+schema:amount "33827";
+rdfs:label "전라남도 장성군" .
+<http://labs.datahub.kr/egs/administrativearea/46800> a schema:AdministrativeArea;
+schema:name "전라남도 장흥군";
+schema:identifier "46800";
+schema:amount "33104";
+rdfs:label "전라남도 장흥군" .
+<http://labs.datahub.kr/egs/administrativearea/46900> a schema:AdministrativeArea;
+schema:name "전라남도 진도군";
+schema:identifier "46900";
+schema:amount "32068";
+rdfs:label "전라남도 진도군" .
+<http://labs.datahub.kr/egs/administrativearea/46860> a schema:AdministrativeArea;
+schema:name "전라남도 함평군";
+schema:identifier "46860";
+schema:amount "32701";
+rdfs:label "전라남도 함평군" .
+<http://labs.datahub.kr/egs/administrativearea/46820> a schema:AdministrativeArea;
+schema:name "전라남도 해남군";
+schema:identifier "46820";
+schema:amount "32036";
+rdfs:label "전라남도 해남군" .
+<http://labs.datahub.kr/egs/administrativearea/46790> a schema:AdministrativeArea;
+schema:name "전라남도 화순군";
+schema:identifier "46790";
+schema:amount "33765";
+rdfs:label "전라남도 화순군" .
+<http://labs.datahub.kr/egs/administrativearea/52790> a schema:AdministrativeArea;
+schema:name "전북특별자치도 고창군";
+schema:identifier "52790";
+schema:amount "33032";
+rdfs:label "전북특별자치도 고창군" .
+<http://labs.datahub.kr/egs/administrativearea/52130> a schema:AdministrativeArea;
+schema:name "전북특별자치도 군산시";
+schema:identifier "52130";
+schema:amount "35411";
+rdfs:label "전북특별자치도 군산시" .
+<http://labs.datahub.kr/egs/administrativearea/52210> a schema:AdministrativeArea;
+schema:name "전북특별자치도 김제시";
+schema:identifier "52210";
+schema:amount "32463";
+rdfs:label "전북특별자치도 김제시" .
+<http://labs.datahub.kr/egs/administrativearea/52190> a schema:AdministrativeArea;
+schema:name "전북특별자치도 남원시";
+schema:identifier "52190";
+schema:amount "33673";
+rdfs:label "전북특별자치도 남원시" .
+<http://labs.datahub.kr/egs/administrativearea/52730> a schema:AdministrativeArea;
+schema:name "전북특별자치도 무주군";
+schema:identifier "52730";
+schema:amount "32367";
+rdfs:label "전북특별자치도 무주군" .
+<http://labs.datahub.kr/egs/administrativearea/52800> a schema:AdministrativeArea;
+schema:name "전북특별자치도 부안군";
+schema:identifier "52800";
+schema:amount "31840";
+rdfs:label "전북특별자치도 부안군" .
+<http://labs.datahub.kr/egs/administrativearea/52770> a schema:AdministrativeArea;
+schema:name "전북특별자치도 순창군";
+schema:identifier "52770";
+schema:amount "32833";
+rdfs:label "전북특별자치도 순창군" .
+<http://labs.datahub.kr/egs/administrativearea/52710> a schema:AdministrativeArea;
+schema:name "전북특별자치도 완주군";
+schema:identifier "52710";
+schema:amount "35181";
+rdfs:label "전북특별자치도 완주군" .
+<http://labs.datahub.kr/egs/administrativearea/52140> a schema:AdministrativeArea;
+schema:name "전북특별자치도 익산시";
+schema:identifier "52140";
+schema:amount "34528";
+rdfs:label "전북특별자치도 익산시" .
+<http://labs.datahub.kr/egs/administrativearea/52750> a schema:AdministrativeArea;
+schema:name "전북특별자치도 임실군";
+schema:identifier "52750";
+schema:amount "32602";
+rdfs:label "전북특별자치도 임실군" .
+<http://labs.datahub.kr/egs/administrativearea/52740> a schema:AdministrativeArea;
+schema:name "전북특별자치도 장수군";
+schema:identifier "52740";
+schema:amount "32554";
+rdfs:label "전북특별자치도 장수군" .
+<http://labs.datahub.kr/egs/administrativearea/52113> a schema:AdministrativeArea;
+schema:name "전북특별자치도 전주시 덕진구";
+schema:identifier "52113";
+schema:amount "37386";
+rdfs:label "전북특별자치도 전주시 덕진구" .
+<http://labs.datahub.kr/egs/administrativearea/52111> a schema:AdministrativeArea;
+schema:name "전북특별자치도 전주시 완산구";
+schema:identifier "52111";
+schema:amount "36709";
+rdfs:label "전북특별자치도 전주시 완산구" .
+<http://labs.datahub.kr/egs/administrativearea/52180> a schema:AdministrativeArea;
+schema:name "전북특별자치도 정읍시";
+schema:identifier "52180";
+schema:amount "33382";
+rdfs:label "전북특별자치도 정읍시" .
+<http://labs.datahub.kr/egs/administrativearea/52720> a schema:AdministrativeArea;
+schema:name "전북특별자치도 진안군";
+schema:identifier "52720";
+schema:amount "32459";
+rdfs:label "전북특별자치도 진안군" .
+<http://labs.datahub.kr/egs/administrativearea/50130> a schema:AdministrativeArea;
+schema:name "제주특별자치도 서귀포시";
+schema:identifier "50130";
+schema:amount "36086";
+rdfs:label "제주특별자치도 서귀포시" .
+<http://labs.datahub.kr/egs/administrativearea/50110> a schema:AdministrativeArea;
+schema:name "제주특별자치도 제주시";
+schema:identifier "50110";
+schema:amount "35685";
+rdfs:label "제주특별자치도 제주시" .
+<http://labs.datahub.kr/egs/administrativearea/44250> a schema:AdministrativeArea;
+schema:name "충청남도 계룡시";
+schema:identifier "44250";
+schema:amount "40335";
+rdfs:label "충청남도 계룡시" .
+<http://labs.datahub.kr/egs/administrativearea/44150> a schema:AdministrativeArea;
+schema:name "충청남도 공주시";
+schema:identifier "44150";
+schema:amount "33441";
+rdfs:label "충청남도 공주시" .
+<http://labs.datahub.kr/egs/administrativearea/44710> a schema:AdministrativeArea;
+schema:name "충청남도 금산군";
+schema:identifier "44710";
+schema:amount "32533";
+rdfs:label "충청남도 금산군" .
+<http://labs.datahub.kr/egs/administrativearea/44230> a schema:AdministrativeArea;
+schema:name "충청남도 논산시";
+schema:identifier "44230";
+schema:amount "32998";
+rdfs:label "충청남도 논산시" .
+<http://labs.datahub.kr/egs/administrativearea/44270> a schema:AdministrativeArea;
+schema:name "충청남도 당진시";
+schema:identifier "44270";
+schema:amount "38369";
+rdfs:label "충청남도 당진시" .
+<http://labs.datahub.kr/egs/administrativearea/44180> a schema:AdministrativeArea;
+schema:name "충청남도 보령시";
+schema:identifier "44180";
+schema:amount "34151";
+rdfs:label "충청남도 보령시" .
+<http://labs.datahub.kr/egs/administrativearea/44760> a schema:AdministrativeArea;
+schema:name "충청남도 부여군";
+schema:identifier "44760";
+schema:amount "32429";
+rdfs:label "충청남도 부여군" .
+<http://labs.datahub.kr/egs/administrativearea/44210> a schema:AdministrativeArea;
+schema:name "충청남도 서산시";
+schema:identifier "44210";
+schema:amount "38646";
+rdfs:label "충청남도 서산시" .
+<http://labs.datahub.kr/egs/administrativearea/44770> a schema:AdministrativeArea;
+schema:name "충청남도 서천군";
+schema:identifier "44770";
+schema:amount "32258";
+rdfs:label "충청남도 서천군" .
+<http://labs.datahub.kr/egs/administrativearea/44200> a schema:AdministrativeArea;
+schema:name "충청남도 아산시";
+schema:identifier "44200";
+schema:amount "39186";
+rdfs:label "충청남도 아산시" .
+<http://labs.datahub.kr/egs/administrativearea/44810> a schema:AdministrativeArea;
+schema:name "충청남도 예산군";
+schema:identifier "44810";
+schema:amount "34001";
+rdfs:label "충청남도 예산군" .
+<http://labs.datahub.kr/egs/administrativearea/44131> schema:identifier "44131";
+a schema:AdministrativeArea;
+schema:name "충청남도 천안시 동남구";
+schema:amount "35267";
+rdfs:label "충청남도 천안시 동남구" .
+<http://labs.datahub.kr/egs/administrativearea/44133> a schema:AdministrativeArea;
+schema:name "충청남도 천안시 서북구";
+schema:identifier "44133";
+schema:amount "40314";
+rdfs:label "충청남도 천안시 서북구" .
+<http://labs.datahub.kr/egs/administrativearea/44790> a schema:AdministrativeArea;
+schema:name "충청남도 청양군";
+schema:identifier "44790";
+schema:amount "32878";
+rdfs:label "충청남도 청양군" .
+<http://labs.datahub.kr/egs/administrativearea/44825> a schema:AdministrativeArea;
+schema:name "충청남도 태안군";
+schema:identifier "44825";
+schema:amount "33458";
+rdfs:label "충청남도 태안군" .
+<http://labs.datahub.kr/egs/administrativearea/44800> a schema:AdministrativeArea;
+schema:name "충청남도 홍성군";
+schema:identifier "44800";
+schema:amount "35468";
+rdfs:label "충청남도 홍성군" .
+<http://labs.datahub.kr/egs/administrativearea/43760> a schema:AdministrativeArea;
+schema:name "충청북도 괴산군";
+schema:identifier "43760";
+schema:amount "32261";
+rdfs:label "충청북도 괴산군" .
+<http://labs.datahub.kr/egs/administrativearea/43800> a schema:AdministrativeArea;
+schema:name "충청북도 단양군";
+schema:identifier "43800";
+schema:amount "32901";
+rdfs:label "충청북도 단양군" .
+<http://labs.datahub.kr/egs/administrativearea/43720> a schema:AdministrativeArea;
+schema:name "충청북도 보은군";
+schema:identifier "43720";
+schema:amount "32525";
+rdfs:label "충청북도 보은군" .
+<http://labs.datahub.kr/egs/administrativearea/43740> schema:identifier "43740";
+a schema:AdministrativeArea;
+schema:name "충청북도 영동군";
+schema:amount "33227";
+rdfs:label "충청북도 영동군" .
+<http://labs.datahub.kr/egs/administrativearea/43730> a schema:AdministrativeArea;
+schema:name "충청북도 옥천군";
+schema:identifier "43730";
+schema:amount "32463";
+rdfs:label "충청북도 옥천군" .
+<http://labs.datahub.kr/egs/administrativearea/43770> a schema:AdministrativeArea;
+schema:name "충청북도 음성군";
+schema:identifier "43770";
+schema:amount "33365";
+rdfs:label "충청북도 음성군" .
+<http://labs.datahub.kr/egs/administrativearea/43150> a schema:AdministrativeArea;
+schema:name "충청북도 제천시";
+schema:identifier "43150";
+schema:amount "34621";
+rdfs:label "충청북도 제천시" .
+<http://labs.datahub.kr/egs/administrativearea/43745> a schema:AdministrativeArea;
+schema:name "충청북도 증평군";
+schema:identifier "43745";
+schema:amount "35469";
+rdfs:label "충청북도 증평군" .
+<http://labs.datahub.kr/egs/administrativearea/43750> a schema:AdministrativeArea;
+schema:name "충청북도 진천군";
+schema:identifier "43750";
+schema:amount "35749";
+rdfs:label "충청북도 진천군" .
+<http://labs.datahub.kr/egs/administrativearea/43111> a schema:AdministrativeArea;
+schema:name "충청북도 청주시 상당구";
+schema:identifier "43111";
+schema:amount "36656";
+rdfs:label "충청북도 청주시 상당구" .
+<http://labs.datahub.kr/egs/administrativearea/43112> a schema:AdministrativeArea;
+schema:name "충청북도 청주시 서원구";
+schema:identifier "43112";
+schema:amount "36304";
+rdfs:label "충청북도 청주시 서원구" .
+<http://labs.datahub.kr/egs/administrativearea/43114> a schema:AdministrativeArea;
+schema:name "충청북도 청주시 청원구";
+schema:identifier "43114";
+schema:amount "37808";
+rdfs:label "충청북도 청주시 청원구" .
+<http://labs.datahub.kr/egs/administrativearea/43113> a schema:AdministrativeArea;
+schema:name "충청북도 청주시 흥덕구";
+schema:identifier "43113";
+schema:amount "39887";
+rdfs:label "충청북도 청주시 흥덕구" .
+<http://labs.datahub.kr/egs/administrativearea/43130> a schema:AdministrativeArea;
+schema:name "충청북도 충주시";
+schema:identifier "43130";
+schema:amount "34638";
+rdfs:label "충청북도 충주시" .

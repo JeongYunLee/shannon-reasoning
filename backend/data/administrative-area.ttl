@@ -1,0 +1,1385 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<http://labs.datahub.kr/egs/administrativearea/11110> schema:containedInPlace "서울특별시";
+schema:name "서울특별시";
+schema:geoWithin "605.2";
+schema:numberOfItems "4469417";
+schema:population "9386034";
+schema:name "종로구";
+schema:geoWithin "23.91";
+schema:numberOfItems "72067";
+schema:population "139417";
+schema:containedInPlace "서울특별시" .
+<http://labs.datahub.kr/egs/administrativearea/11140> schema:containedInPlace "서울특별시";
+schema:name "중구";
+schema:geoWithin "9.96";
+schema:numberOfItems "64714";
+schema:population "121312" .
+<http://labs.datahub.kr/egs/administrativearea/11170> schema:containedInPlace "서울특별시";
+schema:name "용산구";
+schema:geoWithin "21.87";
+schema:numberOfItems "107825";
+schema:population "213151" .
+<http://labs.datahub.kr/egs/administrativearea/11200> schema:containedInPlace "서울특별시";
+schema:name "성동구";
+schema:geoWithin "16.82";
+schema:numberOfItems "133089";
+schema:population "277361" .
+<http://labs.datahub.kr/egs/administrativearea/11215> schema:containedInPlace "서울특별시";
+schema:name "광진구";
+schema:geoWithin "17.06";
+schema:numberOfItems "176901";
+schema:population "335554" .
+<http://labs.datahub.kr/egs/administrativearea/11230> schema:containedInPlace "서울특별시";
+schema:name "동대문구";
+schema:geoWithin "14.22";
+schema:numberOfItems "172801";
+schema:population "341149" .
+<http://labs.datahub.kr/egs/administrativearea/11260> schema:containedInPlace "서울특별시";
+schema:name "중랑구";
+schema:geoWithin "18.5";
+schema:numberOfItems "188097";
+schema:population "382155" .
+<http://labs.datahub.kr/egs/administrativearea/11290> schema:containedInPlace "서울특별시";
+schema:name "성북구";
+schema:geoWithin "24.58";
+schema:numberOfItems "196800";
+schema:population "425602" .
+<http://labs.datahub.kr/egs/administrativearea/11305> schema:containedInPlace "서울특별시";
+schema:name "강북구";
+schema:geoWithin "23.6";
+schema:numberOfItems "143560";
+schema:population "288113" .
+<http://labs.datahub.kr/egs/administrativearea/11320> schema:containedInPlace "서울특별시";
+schema:name "도봉구";
+schema:geoWithin "20.65";
+schema:numberOfItems "138261";
+schema:population "306948" .
+<http://labs.datahub.kr/egs/administrativearea/11350> schema:containedInPlace "서울특별시";
+schema:name "노원구";
+schema:geoWithin "35.44";
+schema:numberOfItems "217904";
+schema:population "498213" .
+<http://labs.datahub.kr/egs/administrativearea/11380> schema:containedInPlace "서울특별시";
+schema:name "은평구";
+schema:geoWithin "29.71";
+schema:numberOfItems "215721";
+schema:population "466770" .
+<http://labs.datahub.kr/egs/administrativearea/11410> schema:containedInPlace "서울특별시";
+schema:name "서대문구";
+schema:geoWithin "17.63";
+schema:numberOfItems "146845";
+schema:population "306231" .
+<http://labs.datahub.kr/egs/administrativearea/11440> schema:containedInPlace "서울특별시";
+schema:name "마포구";
+schema:geoWithin "23.85";
+schema:numberOfItems "181090";
+schema:population "363697" .
+<http://labs.datahub.kr/egs/administrativearea/11470> schema:containedInPlace "서울특별시";
+schema:name "양천구";
+schema:geoWithin "17.41";
+schema:numberOfItems "180695";
+schema:population "436028" .
+<http://labs.datahub.kr/egs/administrativearea/11500> schema:containedInPlace "서울특별시";
+schema:name "강서구";
+schema:geoWithin "41.45";
+schema:numberOfItems "274084";
+schema:population "563058" .
+<http://labs.datahub.kr/egs/administrativearea/11530> schema:containedInPlace "서울특별시";
+schema:name "구로구";
+schema:geoWithin "20.12";
+schema:numberOfItems "184096";
+schema:population "392405" .
+<http://labs.datahub.kr/egs/administrativearea/11545> schema:containedInPlace "서울특별시";
+schema:name "금천구";
+schema:geoWithin "13.02";
+schema:numberOfItems "120381";
+schema:population "227481" .
+<http://labs.datahub.kr/egs/administrativearea/11560> schema:containedInPlace "서울특별시";
+schema:name "영등포구";
+schema:geoWithin "24.55";
+schema:numberOfItems "190737";
+schema:population "374794" .
+<http://labs.datahub.kr/egs/administrativearea/11590> schema:containedInPlace "서울특별시";
+schema:name "동작구";
+schema:geoWithin "16.36";
+schema:numberOfItems "186675";
+schema:population "378769" .
+<http://labs.datahub.kr/egs/administrativearea/11620> schema:containedInPlace "서울특별시";
+schema:name "관악구";
+schema:geoWithin "29.57";
+schema:numberOfItems "284578";
+schema:population "481956" .
+<http://labs.datahub.kr/egs/administrativearea/11650> schema:containedInPlace "서울특별시";
+schema:name "서초구";
+schema:geoWithin "46.97";
+schema:numberOfItems "169884";
+schema:population "407664" .
+<http://labs.datahub.kr/egs/administrativearea/11680> schema:containedInPlace "서울특별시";
+schema:name "강남구";
+schema:geoWithin "39.5";
+schema:numberOfItems "239775";
+schema:population "544873" .
+<http://labs.datahub.kr/egs/administrativearea/11710> schema:containedInPlace "서울특별시";
+schema:name "송파구";
+schema:geoWithin "33.88";
+schema:numberOfItems "285927";
+schema:population "654166" .
+<http://labs.datahub.kr/egs/administrativearea/11740> schema:containedInPlace "서울특별시";
+schema:name "강동구";
+schema:geoWithin "24.59";
+schema:numberOfItems "203734";
+schema:population "459167" .
+<http://labs.datahub.kr/egs/administrativearea/26110> schema:containedInPlace "부산광역시";
+schema:name "부산광역시";
+schema:geoWithin "771.31";
+schema:numberOfItems "1564588";
+schema:population "3293362" .
+<http://labs.datahub.kr/egs/administrativearea/11140> schema:containedInPlace "부산광역시";
+schema:name "중구";
+schema:geoWithin "3.01";
+schema:numberOfItems "23747";
+schema:population "38619" .
+<http://labs.datahub.kr/egs/administrativearea/26140> schema:containedInPlace "부산광역시";
+schema:name "서구";
+schema:geoWithin "13.97";
+schema:numberOfItems "53630";
+schema:population "104089" .
+<http://labs.datahub.kr/egs/administrativearea/26170> schema:containedInPlace "부산광역시";
+schema:name "동구";
+schema:geoWithin "10.12";
+schema:numberOfItems "47428";
+schema:population "87792" .
+<http://labs.datahub.kr/egs/administrativearea/26200> schema:containedInPlace "부산광역시";
+schema:name "영도구";
+schema:geoWithin "14.2";
+schema:numberOfItems "54293";
+schema:population "106548" .
+<http://labs.datahub.kr/egs/administrativearea/26230> schema:containedInPlace "부산광역시";
+schema:name "부산진구";
+schema:geoWithin "29.67";
+schema:numberOfItems "181914";
+schema:population "359508" .
+<http://labs.datahub.kr/egs/administrativearea/26260> schema:containedInPlace "부산광역시";
+schema:name "동래구";
+schema:geoWithin "16.63";
+schema:numberOfItems "119706";
+schema:population "270815" .
+<http://labs.datahub.kr/egs/administrativearea/26290> schema:containedInPlace "부산광역시";
+schema:name "남구";
+schema:geoWithin "26.82";
+schema:numberOfItems "118427";
+schema:population "254185" .
+<http://labs.datahub.kr/egs/administrativearea/26320> schema:containedInPlace "부산광역시";
+schema:name "북구";
+schema:geoWithin "39.37";
+schema:numberOfItems "123082";
+schema:population "273596" .
+<http://labs.datahub.kr/egs/administrativearea/26350> schema:containedInPlace "부산광역시";
+schema:name "해운대구";
+schema:geoWithin "51.52";
+schema:numberOfItems "169532";
+schema:population "380448" .
+<http://labs.datahub.kr/egs/administrativearea/26380> schema:containedInPlace "부산광역시";
+schema:name "사하구";
+schema:geoWithin "41.78";
+schema:numberOfItems "140764";
+schema:population "297831" .
+<http://labs.datahub.kr/egs/administrativearea/26410> schema:containedInPlace "부산광역시";
+schema:name "금정구";
+schema:geoWithin "65.28";
+schema:numberOfItems "105906";
+schema:population "215590" .
+<http://labs.datahub.kr/egs/administrativearea/11500> schema:containedInPlace "부산광역시";
+schema:name "강서구";
+schema:geoWithin "182.16";
+schema:numberOfItems "62238";
+schema:population "142396" .
+<http://labs.datahub.kr/egs/administrativearea/26470> schema:containedInPlace "부산광역시";
+schema:name "연제구";
+schema:geoWithin "12.11";
+schema:numberOfItems "95873";
+schema:population "205766" .
+<http://labs.datahub.kr/egs/administrativearea/26500> schema:containedInPlace "부산광역시";
+schema:name "수영구";
+schema:geoWithin "10.22";
+schema:numberOfItems "88299";
+schema:population "174518" .
+<http://labs.datahub.kr/egs/administrativearea/26530> schema:containedInPlace "부산광역시";
+schema:name "사상구";
+schema:geoWithin "36.1";
+schema:numberOfItems "100003";
+schema:population "202932" .
+<http://labs.datahub.kr/egs/administrativearea/26710> schema:containedInPlace "부산광역시";
+schema:name "기장군";
+schema:geoWithin "218.34";
+schema:numberOfItems "79746";
+schema:population "178729" .
+<http://labs.datahub.kr/egs/administrativearea/27110> schema:containedInPlace "대구광역시";
+schema:name "대구광역시";
+schema:geoWithin "1499.47";
+schema:numberOfItems "1094148";
+schema:population "2374960" .
+<http://labs.datahub.kr/egs/administrativearea/11140> schema:containedInPlace "대구광역시";
+schema:name "중구";
+schema:geoWithin "7.06";
+schema:numberOfItems "44871";
+schema:population "89064" .
+<http://labs.datahub.kr/egs/administrativearea/26170> schema:containedInPlace "대구광역시";
+schema:name "동구";
+schema:geoWithin "182.11";
+schema:numberOfItems "162691";
+schema:population "342813" .
+<http://labs.datahub.kr/egs/administrativearea/26140> schema:containedInPlace "대구광역시";
+schema:name "서구";
+schema:geoWithin "17.32";
+schema:numberOfItems "83949";
+schema:population "164088" .
+<http://labs.datahub.kr/egs/administrativearea/26290> schema:containedInPlace "대구광역시";
+schema:name "남구";
+schema:geoWithin "17.43";
+schema:numberOfItems "75887";
+schema:population "139187" .
+<http://labs.datahub.kr/egs/administrativearea/26320> schema:containedInPlace "대구광역시";
+schema:name "북구";
+schema:geoWithin "93.95";
+schema:numberOfItems "191349";
+schema:population "419624" .
+<http://labs.datahub.kr/egs/administrativearea/27260> schema:containedInPlace "대구광역시";
+schema:name "수성구";
+schema:geoWithin "76.54";
+schema:numberOfItems "171939";
+schema:population "407331" .
+<http://labs.datahub.kr/egs/administrativearea/27290> schema:containedInPlace "대구광역시";
+schema:name "달서구";
+schema:geoWithin "62.37";
+schema:numberOfItems "235685";
+schema:population "527781" .
+<http://labs.datahub.kr/egs/administrativearea/27710> schema:containedInPlace "대구광역시";
+schema:name "달성군";
+schema:geoWithin "428.36";
+schema:numberOfItems "114189";
+schema:population "262084" .
+<http://labs.datahub.kr/egs/administrativearea/27720> schema:containedInPlace "대구광역시";
+schema:name "군위군";
+schema:geoWithin "614.33";
+schema:numberOfItems "13588";
+schema:population "22988" .
+<http://labs.datahub.kr/egs/administrativearea/28110> schema:containedInPlace "인천광역시";
+schema:name "인천광역시";
+schema:geoWithin "1067.09";
+schema:numberOfItems "1350912";
+schema:population "2997410" .
+<http://labs.datahub.kr/egs/administrativearea/28710> schema:geoWithin "411.41";
+schema:name "강화군";
+schema:containedInPlace "인천광역시";
+schema:numberOfItems "35005";
+schema:population "69005" .
+<http://labs.datahub.kr/egs/administrativearea/28720> schema:containedInPlace "인천광역시";
+schema:name "옹진군";
+schema:geoWithin "172.95";
+schema:numberOfItems "12437";
+schema:population "20377" .
+<http://labs.datahub.kr/egs/administrativearea/11140> schema:containedInPlace "인천광역시";
+schema:name "중구";
+schema:geoWithin "140.38";
+schema:numberOfItems "79520";
+schema:population "158958" .
+<http://labs.datahub.kr/egs/administrativearea/26170> schema:containedInPlace "인천광역시";
+schema:name "동구";
+schema:geoWithin "7.25";
+schema:numberOfItems "28091";
+schema:population "59482" .
+<http://labs.datahub.kr/egs/administrativearea/28177> schema:containedInPlace "인천광역시";
+schema:name "미추홀구";
+schema:geoWithin "24.84";
+schema:numberOfItems "196607";
+schema:population "405995" .
+<http://labs.datahub.kr/egs/administrativearea/28185> schema:containedInPlace "인천광역시";
+schema:name "연수구";
+schema:geoWithin "56.19";
+schema:numberOfItems "159905";
+schema:population "392416" .
+<http://labs.datahub.kr/egs/administrativearea/28200> schema:containedInPlace "인천광역시";
+schema:name "남동구";
+schema:geoWithin "57.45";
+schema:numberOfItems "224268";
+schema:population "492415" .
+<http://labs.datahub.kr/egs/administrativearea/28237> schema:containedInPlace "인천광역시";
+schema:name "부평구";
+schema:geoWithin "32.01";
+schema:numberOfItems "223271";
+schema:population "494138" .
+<http://labs.datahub.kr/egs/administrativearea/28245> schema:containedInPlace "인천광역시";
+schema:name "계양구";
+schema:geoWithin "45.57";
+schema:numberOfItems "125640";
+schema:population "280266" .
+<http://labs.datahub.kr/egs/administrativearea/26140> schema:containedInPlace "인천광역시";
+schema:name "서구";
+schema:geoWithin "119.06";
+schema:numberOfItems "266168";
+schema:population "624358" .
+<http://labs.datahub.kr/egs/administrativearea/29110> schema:containedInPlace "광주광역시";
+schema:name "광주광역시";
+schema:geoWithin "500.97";
+schema:numberOfItems "655433";
+schema:population "1419237" .
+<http://labs.datahub.kr/egs/administrativearea/26170> schema:name "동구";
+schema:containedInPlace "광주광역시";
+schema:geoWithin "49.32";
+schema:numberOfItems "55283";
+schema:population "107176" .
+<http://labs.datahub.kr/egs/administrativearea/26140> schema:containedInPlace "광주광역시";
+schema:name "서구";
+schema:geoWithin "47.74";
+schema:numberOfItems "133816";
+schema:population "283991" .
+<http://labs.datahub.kr/egs/administrativearea/26290> schema:containedInPlace "광주광역시";
+schema:name "남구";
+schema:geoWithin "60.96";
+schema:numberOfItems "95417";
+schema:population "209646" .
+<http://labs.datahub.kr/egs/administrativearea/26320> schema:containedInPlace "광주광역시";
+schema:name "북구";
+schema:geoWithin "120.26";
+schema:numberOfItems "199280";
+schema:population "421683" .
+<http://labs.datahub.kr/egs/administrativearea/29200> schema:containedInPlace "광주광역시";
+schema:name "광산구";
+schema:geoWithin "222.69";
+schema:numberOfItems "171637";
+schema:population "396741" .
+<http://labs.datahub.kr/egs/administrativearea/30110> schema:containedInPlace "대전광역시";
+schema:name "대전광역시";
+schema:geoWithin "539.78";
+schema:numberOfItems "680261";
+schema:population "1442216" .
+<http://labs.datahub.kr/egs/administrativearea/26170> schema:containedInPlace "대전광역시";
+schema:name "동구";
+schema:geoWithin "136.69";
+schema:numberOfItems "108996";
+schema:population "217628" .
+<http://labs.datahub.kr/egs/administrativearea/11140> schema:containedInPlace "대전광역시";
+schema:name "중구";
+schema:geoWithin "62.19";
+schema:numberOfItems "106885";
+schema:population "223256" .
+<http://labs.datahub.kr/egs/administrativearea/26140> schema:containedInPlace "대전광역시";
+schema:name "서구";
+schema:geoWithin "95.54";
+schema:numberOfItems "217305";
+schema:population "464634" .
+<http://labs.datahub.kr/egs/administrativearea/30200> schema:containedInPlace "대전광역시";
+schema:name "유성구";
+schema:geoWithin "176.61";
+schema:numberOfItems "166767";
+schema:population "366845" .
+<http://labs.datahub.kr/egs/administrativearea/30230> schema:containedInPlace "대전광역시";
+schema:name "대덕구";
+schema:geoWithin "68.74";
+schema:numberOfItems "80308";
+schema:population "169853" .
+<http://labs.datahub.kr/egs/administrativearea/31110> schema:containedInPlace "울산광역시";
+schema:name "울산광역시";
+schema:geoWithin "1062.83";
+schema:numberOfItems "490690";
+schema:population "1103661" .
+<http://labs.datahub.kr/egs/administrativearea/11140> schema:geoWithin "37";
+schema:containedInPlace "울산광역시";
+schema:name "중구";
+schema:numberOfItems "94372";
+schema:population "208668" .
+<http://labs.datahub.kr/egs/administrativearea/26290> schema:containedInPlace "울산광역시";
+schema:name "남구";
+schema:geoWithin "74.02";
+schema:numberOfItems "140162";
+schema:population "307232" .
+<http://labs.datahub.kr/egs/administrativearea/26170> schema:containedInPlace "울산광역시";
+schema:name "동구";
+schema:geoWithin "36.07";
+schema:numberOfItems "67743";
+schema:population "152287" .
+<http://labs.datahub.kr/egs/administrativearea/26320> schema:containedInPlace "울산광역시";
+schema:name "북구";
+schema:geoWithin "157.35";
+schema:numberOfItems "87865";
+schema:population "216477" .
+<http://labs.datahub.kr/egs/administrativearea/31710> schema:containedInPlace "울산광역시";
+schema:name "울주군";
+schema:geoWithin "758.38";
+schema:numberOfItems "100548";
+schema:population "218997" .
+<http://labs.datahub.kr/egs/administrativearea/36110> schema:containedInPlace "세종특별자치시";
+schema:name "세종특별자치시";
+schema:geoWithin "464.96";
+schema:numberOfItems "160835";
+schema:population "386525";
+schema:containedInPlace "세종특별자치시";
+schema:name "세종특별자치시";
+schema:geoWithin "464.96";
+schema:numberOfItems "160835";
+schema:population "386525" .
+<http://labs.datahub.kr/egs/administrativearea/41110> schema:containedInPlace "경기도";
+schema:name "경기도";
+schema:geoWithin "10199.73";
+schema:numberOfItems "5978724";
+schema:population "13630821";
+schema:name "수원시";
+schema:containedInPlace "경기도";
+schema:geoWithin "121.1";
+schema:numberOfItems "537078";
+schema:population "1197257" .
+<http://labs.datahub.kr/egs/administrativearea/41111> schema:containedInPlace "경기도";
+schema:name "수원시 장안구";
+schema:geoWithin "33.34";
+schema:numberOfItems "119900";
+schema:population "270849" .
+<http://labs.datahub.kr/egs/administrativearea/41113> schema:containedInPlace "경기도";
+schema:name "수원시 권선구";
+schema:geoWithin "47.18";
+schema:numberOfItems "163796";
+schema:population "366167" .
+<http://labs.datahub.kr/egs/administrativearea/41115> schema:containedInPlace "경기도";
+schema:name "수원시 팔달구";
+schema:geoWithin "12.87";
+schema:numberOfItems "98505";
+schema:population "197213" .
+<http://labs.datahub.kr/egs/administrativearea/41117> schema:containedInPlace "경기도";
+schema:name "수원시 영통구";
+schema:geoWithin "27.71";
+schema:numberOfItems "154877";
+schema:population "363028" .
+<http://labs.datahub.kr/egs/administrativearea/41280> schema:containedInPlace "경기도";
+schema:name "고양시";
+schema:geoWithin "268.13";
+schema:numberOfItems "464380";
+schema:population "1074907" .
+<http://labs.datahub.kr/egs/administrativearea/41281> schema:containedInPlace "경기도";
+schema:name "고양시 덕양구";
+schema:geoWithin "165.6";
+schema:numberOfItems "220682";
+schema:population "496438" .
+<http://labs.datahub.kr/egs/administrativearea/41285> schema:containedInPlace "경기도";
+schema:name "고양시 일산동구";
+schema:geoWithin "59.96";
+schema:numberOfItems "127885";
+schema:population "291597" .
+<http://labs.datahub.kr/egs/administrativearea/41287> schema:containedInPlace "경기도";
+schema:name "고양시 일산서구";
+schema:geoWithin "42.56";
+schema:numberOfItems "115813";
+schema:population "286872" .
+<http://labs.datahub.kr/egs/administrativearea/41460> schema:containedInPlace "경기도";
+schema:name "용인시";
+schema:geoWithin "591.25";
+schema:numberOfItems "435340";
+schema:population "1075566" .
+<http://labs.datahub.kr/egs/administrativearea/41461> schema:name "용인시 처인구";
+schema:containedInPlace "경기도";
+schema:geoWithin "467.51";
+schema:numberOfItems "117863";
+schema:population "261488" .
+<http://labs.datahub.kr/egs/administrativearea/41463> schema:containedInPlace "경기도";
+schema:name "용인시 기흥구";
+schema:geoWithin "81.64";
+schema:numberOfItems "174971";
+schema:population "436656" .
+<http://labs.datahub.kr/egs/administrativearea/41465> schema:containedInPlace "경기도";
+schema:name "용인시 수지구";
+schema:geoWithin "42.11";
+schema:numberOfItems "142506";
+schema:population "377422" .
+<http://labs.datahub.kr/egs/administrativearea/41130> schema:containedInPlace "경기도";
+schema:name "성남시";
+schema:geoWithin "141.63";
+schema:numberOfItems "409602";
+schema:population "919747" .
+<http://labs.datahub.kr/egs/administrativearea/41131> schema:containedInPlace "경기도";
+schema:name "성남시 수정구";
+schema:geoWithin "45.45";
+schema:numberOfItems "116390";
+schema:population "235942" .
+<http://labs.datahub.kr/egs/administrativearea/41133> schema:containedInPlace "경기도";
+schema:name "성남시 중원구";
+schema:geoWithin "26.42";
+schema:numberOfItems "101034";
+schema:population "210848" .
+<http://labs.datahub.kr/egs/administrativearea/41135> schema:containedInPlace "경기도";
+schema:name "성남시 분당구";
+schema:geoWithin "69.76";
+schema:numberOfItems "192178";
+schema:population "472957" .
+<http://labs.datahub.kr/egs/administrativearea/41190> schema:containedInPlace "경기도";
+schema:name "부천시";
+schema:geoWithin "53.46";
+schema:numberOfItems "344096";
+schema:population "779968" .
+<http://labs.datahub.kr/egs/administrativearea/41590> schema:containedInPlace "경기도";
+schema:name "화성시";
+schema:geoWithin "700.64";
+schema:numberOfItems "404623";
+schema:population "944342" .
+<http://labs.datahub.kr/egs/administrativearea/41270> schema:containedInPlace "경기도";
+schema:name "안산시";
+schema:geoWithin "156.47";
+schema:numberOfItems "288567";
+schema:population "629308" .
+<http://labs.datahub.kr/egs/administrativearea/41271> schema:containedInPlace "경기도";
+schema:name "안산시 상록구";
+schema:geoWithin "57.99";
+schema:numberOfItems "153212";
+schema:population "334867" .
+<http://labs.datahub.kr/egs/administrativearea/41273> schema:containedInPlace "경기도";
+schema:name "안산시 단원구";
+schema:geoWithin "98.47";
+schema:numberOfItems "135355";
+schema:population "294441" .
+<http://labs.datahub.kr/egs/administrativearea/41360> schema:population "732265";
+schema:containedInPlace "경기도";
+schema:name "남양주시";
+schema:geoWithin "458.13";
+schema:numberOfItems "304768" .
+<http://labs.datahub.kr/egs/administrativearea/41170> schema:containedInPlace "경기도";
+schema:name "안양시";
+schema:geoWithin "58.5";
+schema:numberOfItems "227627";
+schema:population "544660" .
+<http://labs.datahub.kr/egs/administrativearea/41171> schema:geoWithin "36.56";
+schema:numberOfItems "101831";
+schema:population "230664";
+schema:name "안양시 만안구";
+schema:containedInPlace "경기도" .
+<http://labs.datahub.kr/egs/administrativearea/41173> schema:containedInPlace "경기도";
+schema:name "안양시 동안구";
+schema:geoWithin "21.94";
+schema:numberOfItems "125796";
+schema:population "313996" .
+<http://labs.datahub.kr/egs/administrativearea/41220> schema:containedInPlace "경기도";
+schema:name "평택시";
+schema:geoWithin "458.45";
+schema:numberOfItems "279835";
+schema:population "591022" .
+<http://labs.datahub.kr/egs/administrativearea/41390> schema:containedInPlace "경기도";
+schema:name "시흥시";
+schema:geoWithin "139.94";
+schema:numberOfItems "228474";
+schema:population "519715" .
+<http://labs.datahub.kr/egs/administrativearea/41480> schema:containedInPlace "경기도";
+schema:name "파주시";
+schema:geoWithin "673.96";
+schema:numberOfItems "220158";
+schema:population "497753" .
+<http://labs.datahub.kr/egs/administrativearea/41150> schema:containedInPlace "경기도";
+schema:name "의정부시";
+schema:geoWithin "81.55";
+schema:numberOfItems "209891";
+schema:population "464213" .
+<http://labs.datahub.kr/egs/administrativearea/41570> schema:containedInPlace "경기도";
+schema:name "김포시";
+schema:geoWithin "276.6";
+schema:numberOfItems "204594";
+schema:population "486172" .
+<http://labs.datahub.kr/egs/administrativearea/41610> schema:geoWithin "430.99";
+schema:numberOfItems "170845";
+schema:population "391377";
+schema:containedInPlace "경기도";
+schema:name "광주시" .
+<http://labs.datahub.kr/egs/administrativearea/41210> schema:containedInPlace "경기도";
+schema:name "광명시";
+schema:geoWithin "38.52";
+schema:numberOfItems "115114";
+schema:population "280197" .
+<http://labs.datahub.kr/egs/administrativearea/41410> schema:containedInPlace "경기도";
+schema:numberOfItems "113032";
+schema:geoWithin "36.42";
+schema:name "군포시";
+schema:population "261229" .
+<http://labs.datahub.kr/egs/administrativearea/41450> schema:containedInPlace "경기도";
+schema:name "하남시";
+schema:geoWithin "92.99";
+schema:numberOfItems "141764";
+schema:population "329861" .
+<http://labs.datahub.kr/egs/administrativearea/41370> schema:containedInPlace "경기도";
+schema:name "오산시";
+schema:geoWithin "42.69";
+schema:numberOfItems "104437";
+schema:population "229656" .
+<http://labs.datahub.kr/egs/administrativearea/41630> schema:containedInPlace "경기도";
+schema:name "양주시";
+schema:geoWithin "310.49";
+schema:numberOfItems "117518";
+schema:population "268026" .
+<http://labs.datahub.kr/egs/administrativearea/41500> schema:containedInPlace "경기도";
+schema:name "이천시";
+schema:geoWithin "461.46";
+schema:numberOfItems "103793";
+schema:population "222098" .
+<http://labs.datahub.kr/egs/administrativearea/41310> schema:containedInPlace "경기도";
+schema:name "구리시";
+schema:geoWithin "33.34";
+schema:numberOfItems "80450";
+schema:population "187093" .
+<http://labs.datahub.kr/egs/administrativearea/41550> schema:containedInPlace "경기도";
+schema:name "안성시";
+schema:geoWithin "553.51";
+schema:numberOfItems "91026";
+schema:population "189034" .
+<http://labs.datahub.kr/egs/administrativearea/41650> schema:containedInPlace "경기도";
+schema:name "포천시";
+schema:geoWithin "827.17";
+schema:numberOfItems "72876";
+schema:population "143323" .
+<http://labs.datahub.kr/egs/administrativearea/41430> schema:containedInPlace "경기도";
+schema:name "의왕시";
+schema:geoWithin "54.03";
+schema:numberOfItems "64402";
+schema:population "158870" .
+<http://labs.datahub.kr/egs/administrativearea/41830> schema:containedInPlace "경기도";
+schema:name "양평군";
+schema:geoWithin "877.82";
+schema:numberOfItems "61811";
+schema:population "125238" .
+<http://labs.datahub.kr/egs/administrativearea/41670> schema:containedInPlace "경기도";
+schema:name "여주시";
+schema:geoWithin "608.21";
+schema:numberOfItems "55514";
+schema:population "114412" .
+<http://labs.datahub.kr/egs/administrativearea/41250> schema:containedInPlace "경기도";
+schema:name "동두천시";
+schema:geoWithin "95.67";
+schema:numberOfItems "43366";
+schema:population "88626" .
+<http://labs.datahub.kr/egs/administrativearea/41290> schema:containedInPlace "경기도";
+schema:name "과천시";
+schema:geoWithin "35.87";
+schema:numberOfItems "29194";
+schema:population "81000" .
+<http://labs.datahub.kr/egs/administrativearea/41820> schema:containedInPlace "경기도";
+schema:name "가평군";
+schema:geoWithin "842.82";
+schema:numberOfItems "32606";
+schema:population "62302" .
+<http://labs.datahub.kr/egs/administrativearea/41800> schema:containedInPlace "경기도";
+schema:name "연천군";
+schema:geoWithin "677.94";
+schema:numberOfItems "21943";
+schema:population "41584" .
+<http://labs.datahub.kr/egs/administrativearea/42110> schema:containedInPlace "강원특별자치도";
+schema:name "강원특별자치도";
+schema:geoWithin "16830.84";
+schema:numberOfItems "760635";
+schema:population "1527807" .
+<http://labs.datahub.kr/egs/administrativearea/51110> schema:containedInPlace "강원특별자치도";
+schema:name "춘천시";
+schema:geoWithin "1116.42";
+schema:numberOfItems "135498";
+schema:population "286426" .
+<http://labs.datahub.kr/egs/administrativearea/51130> schema:containedInPlace "강원특별자치도";
+schema:name "원주시";
+schema:geoWithin "868.29";
+schema:numberOfItems "171275";
+schema:population "361503" .
+<http://labs.datahub.kr/egs/administrativearea/51150> schema:containedInPlace "강원특별자치도";
+schema:name "강릉시";
+schema:geoWithin "1040.83";
+schema:numberOfItems "103682";
+schema:population "209439" .
+<http://labs.datahub.kr/egs/administrativearea/51170> schema:containedInPlace "강원특별자치도";
+schema:name "동해시";
+schema:geoWithin "180.31";
+schema:numberOfItems "43361";
+schema:population "88625" .
+<http://labs.datahub.kr/egs/administrativearea/51190> schema:containedInPlace "강원특별자치도";
+schema:name "태백시";
+schema:geoWithin "303.44";
+schema:numberOfItems "20377";
+schema:population "38702" .
+<http://labs.datahub.kr/egs/administrativearea/51210> schema:containedInPlace "강원특별자치도";
+schema:name "속초시";
+schema:geoWithin "105.75";
+schema:numberOfItems "41330";
+schema:population "82054" .
+<http://labs.datahub.kr/egs/administrativearea/51230> schema:numberOfItems "33700";
+schema:containedInPlace "강원특별자치도";
+schema:name "삼척시";
+schema:geoWithin "1187.84";
+schema:population "62651" .
+<http://labs.datahub.kr/egs/administrativearea/51720> schema:containedInPlace "강원특별자치도";
+schema:name "홍천군";
+schema:geoWithin "1820.57";
+schema:numberOfItems "34594";
+schema:population "67309" .
+<http://labs.datahub.kr/egs/administrativearea/51730> schema:containedInPlace "강원특별자치도";
+schema:name "횡성군";
+schema:geoWithin "998";
+schema:numberOfItems "23908";
+schema:population "46359" .
+<http://labs.datahub.kr/egs/administrativearea/51750> schema:containedInPlace "강원특별자치도";
+schema:name "영월군";
+schema:geoWithin "1127.41";
+schema:numberOfItems "21276";
+schema:population "37332" .
+<http://labs.datahub.kr/egs/administrativearea/51760> schema:containedInPlace "강원특별자치도";
+schema:name "평창군";
+schema:geoWithin "1464.26";
+schema:numberOfItems "21993";
+schema:population "40659" .
+<http://labs.datahub.kr/egs/administrativearea/51770> schema:containedInPlace "강원특별자치도";
+schema:name "정선군";
+schema:geoWithin "1219.78";
+schema:numberOfItems "19287";
+schema:population "34202" .
+<http://labs.datahub.kr/egs/administrativearea/51780> schema:containedInPlace "강원특별자치도";
+schema:name "철원군";
+schema:geoWithin "890.13";
+schema:numberOfItems "20501";
+schema:population "41448" .
+<http://labs.datahub.kr/egs/administrativearea/51790> schema:name "화천군";
+schema:containedInPlace "강원특별자치도";
+schema:geoWithin "909.09";
+schema:numberOfItems "12052";
+schema:population "23007" .
+<http://labs.datahub.kr/egs/administrativearea/51800> schema:containedInPlace "강원특별자치도";
+schema:name "양구군";
+schema:geoWithin "661.99";
+schema:numberOfItems "10544";
+schema:population "21056" .
+<http://labs.datahub.kr/egs/administrativearea/51810> schema:containedInPlace "강원특별자치도";
+schema:name "인제군";
+schema:geoWithin "1646.2";
+schema:numberOfItems "16787";
+schema:population "32020" .
+<http://labs.datahub.kr/egs/administrativearea/48820> schema:containedInPlace "강원특별자치도";
+schema:name "고성군";
+schema:geoWithin "660.77";
+schema:numberOfItems "15431";
+schema:population "27305" .
+<http://labs.datahub.kr/egs/administrativearea/51830> schema:containedInPlace "강원특별자치도";
+schema:name "양양군";
+schema:geoWithin "629.78";
+schema:numberOfItems "15039";
+schema:population "27710" .
+<http://labs.datahub.kr/egs/administrativearea/43110> schema:containedInPlace "충청북도";
+schema:name "충청북도";
+schema:geoWithin "7407.01";
+schema:numberOfItems "779967";
+schema:population "1593469";
+schema:containedInPlace "충청북도";
+schema:name "청주시";
+schema:geoWithin "941.05";
+schema:numberOfItems "399092";
+schema:population "852189" .
+<http://labs.datahub.kr/egs/administrativearea/43111> schema:containedInPlace "충청북도";
+schema:name "청주시 상당구";
+schema:geoWithin "404.26";
+schema:numberOfItems "89763";
+schema:population "200575" .
+<http://labs.datahub.kr/egs/administrativearea/43112> schema:containedInPlace "충청북도";
+schema:name "청주시 서원구";
+schema:geoWithin "122.67";
+schema:numberOfItems "88901";
+schema:population "186302" .
+<http://labs.datahub.kr/egs/administrativearea/43113> schema:containedInPlace "충청북도";
+schema:name "청주시 흥덕구";
+schema:geoWithin "199.11";
+schema:numberOfItems "130239";
+schema:population "274594" .
+<http://labs.datahub.kr/egs/administrativearea/43114> schema:containedInPlace "충청북도";
+schema:name "청주시 청원구";
+schema:geoWithin "215.01";
+schema:numberOfItems "90189";
+schema:population "190718" .
+<http://labs.datahub.kr/egs/administrativearea/43130> schema:containedInPlace "충청북도";
+schema:name "충주시";
+schema:geoWithin "983.26";
+schema:numberOfItems "102143";
+schema:population "207778" .
+<http://labs.datahub.kr/egs/administrativearea/43150> schema:containedInPlace "충청북도";
+schema:name "제천시";
+schema:geoWithin "882.77";
+schema:numberOfItems "66038";
+schema:population "130194" .
+<http://labs.datahub.kr/egs/administrativearea/43720> schema:containedInPlace "충청북도";
+schema:name "보은군";
+schema:geoWithin "584.26";
+schema:numberOfItems "16864";
+schema:population "31010" .
+<http://labs.datahub.kr/egs/administrativearea/43730> schema:containedInPlace "충청북도";
+schema:name "옥천군";
+schema:geoWithin "537.28";
+schema:numberOfItems "25406";
+schema:population "48891" .
+<http://labs.datahub.kr/egs/administrativearea/43740> schema:containedInPlace "충청북도";
+schema:name "영동군";
+schema:geoWithin "846.91";
+schema:numberOfItems "23722";
+schema:population "44195" .
+<http://labs.datahub.kr/egs/administrativearea/43745> schema:containedInPlace "충청북도";
+schema:name "증평군";
+schema:geoWithin "81.8";
+schema:numberOfItems "18944";
+schema:population "37484" .
+<http://labs.datahub.kr/egs/administrativearea/43750> schema:geoWithin "407.38";
+schema:containedInPlace "충청북도";
+schema:name "진천군";
+schema:numberOfItems "42751";
+schema:population "86254" .
+<http://labs.datahub.kr/egs/administrativearea/43760> schema:containedInPlace "충청북도";
+schema:name "괴산군";
+schema:geoWithin "842.01";
+schema:numberOfItems "21304";
+schema:population "36590" .
+<http://labs.datahub.kr/egs/administrativearea/43770> schema:containedInPlace "충청북도";
+schema:name "음성군";
+schema:geoWithin "520.12";
+schema:numberOfItems "48431";
+schema:population "91183" .
+<http://labs.datahub.kr/egs/administrativearea/43800> schema:containedInPlace "충청북도";
+schema:name "단양군";
+schema:geoWithin "780.15";
+schema:numberOfItems "15272";
+schema:population "27701" .
+<http://labs.datahub.kr/egs/administrativearea/44130> schema:containedInPlace "충청남도";
+schema:name "충청남도";
+schema:geoWithin "8247.54";
+schema:numberOfItems "1035449";
+schema:population "2130119";
+schema:containedInPlace "충청남도";
+schema:name "천안시";
+schema:geoWithin "636.15";
+schema:numberOfItems "306418";
+schema:population "655959" .
+<http://labs.datahub.kr/egs/administrativearea/44131> schema:containedInPlace "충청남도";
+schema:name "천안시 동남구";
+schema:geoWithin "438.39";
+schema:numberOfItems "121234";
+schema:population "256691" .
+<http://labs.datahub.kr/egs/administrativearea/44133> schema:containedInPlace "충청남도";
+schema:name "천안시 서북구";
+schema:geoWithin "197.76";
+schema:numberOfItems "185184";
+schema:population "399268" .
+<http://labs.datahub.kr/egs/administrativearea/44150> schema:containedInPlace "충청남도";
+schema:name "공주시";
+schema:geoWithin "864.16";
+schema:numberOfItems "53019";
+schema:population "102104" .
+<http://labs.datahub.kr/egs/administrativearea/44180> schema:containedInPlace "충청남도";
+schema:name "보령시";
+schema:geoWithin "586.86";
+schema:numberOfItems "49709";
+schema:population "95772" .
+<http://labs.datahub.kr/egs/administrativearea/44200> schema:containedInPlace "충청남도";
+schema:name "아산시";
+schema:geoWithin "542.8";
+schema:numberOfItems "159108";
+schema:population "345796" .
+<http://labs.datahub.kr/egs/administrativearea/44210> schema:containedInPlace "충청남도";
+schema:name "서산시";
+schema:geoWithin "742.28";
+schema:numberOfItems "83565";
+schema:population "176011" .
+<http://labs.datahub.kr/egs/administrativearea/44230> schema:containedInPlace "충청남도";
+schema:name "논산시";
+schema:geoWithin "556.25";
+schema:numberOfItems "57648";
+schema:population "110423" .
+<http://labs.datahub.kr/egs/administrativearea/44250> schema:containedInPlace "충청남도";
+schema:name "계룡시";
+schema:geoWithin "60.69";
+schema:numberOfItems "19404";
+schema:population "46667" .
+<http://labs.datahub.kr/egs/administrativearea/44270> schema:containedInPlace "충청남도";
+schema:name "당진시";
+schema:geoWithin "705.62";
+schema:numberOfItems "83058";
+schema:population "170302" .
+<http://labs.datahub.kr/egs/administrativearea/44710> schema:containedInPlace "충청남도";
+schema:name "금산군";
+schema:geoWithin "577.21";
+schema:numberOfItems "26562";
+schema:population "50093" .
+<http://labs.datahub.kr/egs/administrativearea/44760> schema:containedInPlace "충청남도";
+schema:name "부여군";
+schema:geoWithin "624.65";
+schema:numberOfItems "32667";
+schema:population "61046" .
+<http://labs.datahub.kr/egs/administrativearea/44770> schema:containedInPlace "충청남도";
+schema:name "서천군";
+schema:geoWithin "366.12";
+schema:numberOfItems "26543";
+schema:population "49116" .
+<http://labs.datahub.kr/egs/administrativearea/44790> schema:containedInPlace "충청남도";
+schema:name "청양군";
+schema:geoWithin "479.25";
+schema:numberOfItems "16722";
+schema:population "30168" .
+<http://labs.datahub.kr/egs/administrativearea/44800> schema:numberOfItems "47463";
+schema:geoWithin "446.69";
+schema:name "홍성군";
+schema:containedInPlace "충청남도";
+schema:population "97524" .
+<http://labs.datahub.kr/egs/administrativearea/44810> schema:containedInPlace "충청남도";
+schema:name "예산군";
+schema:geoWithin "542.72";
+schema:numberOfItems "40245";
+schema:population "78354" .
+<http://labs.datahub.kr/egs/administrativearea/44825> schema:containedInPlace "충청남도";
+schema:name "태안군";
+schema:geoWithin "516.05";
+schema:numberOfItems "33318";
+schema:population "60784" .
+<http://labs.datahub.kr/egs/administrativearea/45110> schema:containedInPlace "전북특별자치도";
+schema:name "전주시";
+schema:geoWithin "206.01";
+schema:numberOfItems "296394";
+schema:population "642727" .
+<http://labs.datahub.kr/egs/administrativearea/52111> schema:containedInPlace "전북특별자치도";
+schema:name "전주시 완산구";
+schema:geoWithin "92.49";
+schema:numberOfItems "153376";
+schema:population "327178" .
+<http://labs.datahub.kr/egs/administrativearea/52113> schema:containedInPlace "전북특별자치도";
+schema:name "전주시 덕진구";
+schema:geoWithin "113.52";
+schema:numberOfItems "143018";
+schema:population "315549" .
+<http://labs.datahub.kr/egs/administrativearea/52130> schema:containedInPlace "전북특별자치도";
+schema:name "군산시";
+schema:geoWithin "398.02";
+schema:numberOfItems "123996";
+schema:population "259980" .
+<http://labs.datahub.kr/egs/administrativearea/52140> schema:containedInPlace "전북특별자치도";
+schema:name "익산시";
+schema:geoWithin "506.59";
+schema:numberOfItems "130197";
+schema:population "270036" .
+<http://labs.datahub.kr/egs/administrativearea/52180> schema:containedInPlace "전북특별자치도";
+schema:name "정읍시";
+schema:geoWithin "693.3";
+schema:numberOfItems "54734";
+schema:population "103620" .
+<http://labs.datahub.kr/egs/administrativearea/52190> schema:containedInPlace "전북특별자치도";
+schema:name "남원시";
+schema:geoWithin "752.09";
+schema:numberOfItems "39839";
+schema:population "76781" .
+<http://labs.datahub.kr/egs/administrativearea/52210> schema:containedInPlace "전북특별자치도";
+schema:name "김제시";
+schema:geoWithin "545.98";
+schema:numberOfItems "43625";
+schema:population "81430" .
+<http://labs.datahub.kr/egs/administrativearea/52710> schema:containedInPlace "전북특별자치도";
+schema:name "완주군";
+schema:geoWithin "821.38";
+schema:numberOfItems "48652";
+schema:population "97827" .
+<http://labs.datahub.kr/egs/administrativearea/52720> schema:containedInPlace "전북특별자치도";
+schema:name "진안군";
+schema:geoWithin "789.14";
+schema:numberOfItems "13593";
+schema:population "24465" .
+<http://labs.datahub.kr/egs/administrativearea/52730> schema:containedInPlace "전북특별자치도";
+schema:name "무주군";
+schema:geoWithin "632.06";
+schema:numberOfItems "13008";
+schema:population "23251" .
+<http://labs.datahub.kr/egs/administrativearea/52740> schema:containedInPlace "전북특별자치도";
+schema:name "장수군";
+schema:geoWithin "533.18";
+schema:numberOfItems "11542";
+schema:population "20983" .
+<http://labs.datahub.kr/egs/administrativearea/52750> schema:containedInPlace "전북특별자치도";
+schema:name "임실군";
+schema:geoWithin "597.17";
+schema:numberOfItems "14916";
+schema:population "25956" .
+<http://labs.datahub.kr/egs/administrativearea/52770> schema:containedInPlace "전북특별자치도";
+schema:name "순창군";
+schema:geoWithin "495.93";
+schema:numberOfItems "14332";
+schema:population "26764" .
+<http://labs.datahub.kr/egs/administrativearea/52790> schema:containedInPlace "전북특별자치도";
+schema:name "고창군";
+schema:geoWithin "607.48";
+schema:numberOfItems "28733";
+schema:population "51750" .
+<http://labs.datahub.kr/egs/administrativearea/52800> schema:numberOfItems "27632";
+schema:name "부안군";
+schema:containedInPlace "전북특별자치도";
+schema:geoWithin "495";
+schema:population "49187" .
+<http://labs.datahub.kr/egs/administrativearea/46110> schema:numberOfItems "911442";
+schema:geoWithin "12362.33";
+schema:name "전라남도";
+schema:containedInPlace "전라남도";
+schema:population "1804217";
+schema:containedInPlace "전라남도";
+schema:name "목포시";
+schema:geoWithin "51.73";
+schema:numberOfItems "104375";
+schema:population "214156" .
+<http://labs.datahub.kr/egs/administrativearea/46130> schema:population "271696";
+schema:numberOfItems "128733";
+schema:name "여수시";
+schema:geoWithin "512.33";
+schema:containedInPlace "전라남도" .
+<http://labs.datahub.kr/egs/administrativearea/46150> schema:containedInPlace "전라남도";
+schema:name "순천시";
+schema:geoWithin "911.04";
+schema:numberOfItems "126412";
+schema:population "278137" .
+<http://labs.datahub.kr/egs/administrativearea/46170> schema:name "나주시";
+schema:geoWithin "608.49";
+schema:containedInPlace "전라남도";
+schema:numberOfItems "60419";
+schema:population "117377" .
+<http://labs.datahub.kr/egs/administrativearea/46230> schema:containedInPlace "전라남도";
+schema:name "광양시";
+schema:geoWithin "464.86";
+schema:numberOfItems "70162";
+schema:population "152666" .
+<http://labs.datahub.kr/egs/administrativearea/46710> schema:containedInPlace "전라남도";
+schema:name "담양군";
+schema:geoWithin "455.07";
+schema:numberOfItems "24557";
+schema:population "45373" .
+<http://labs.datahub.kr/egs/administrativearea/46720> schema:containedInPlace "전라남도";
+schema:name "곡성군";
+schema:numberOfItems "15577";
+schema:geoWithin "547.29";
+schema:population "26905" .
+<http://labs.datahub.kr/egs/administrativearea/46730> schema:containedInPlace "전라남도";
+schema:name "구례군";
+schema:geoWithin "442.96";
+schema:numberOfItems "13432";
+schema:population "24314" .
+<http://labs.datahub.kr/egs/administrativearea/46770> schema:containedInPlace "전라남도";
+schema:name "고흥군";
+schema:geoWithin "807.17";
+schema:numberOfItems "35360";
+schema:population "61113" .
+<http://labs.datahub.kr/egs/administrativearea/46780> schema:containedInPlace "전라남도";
+schema:name "보성군";
+schema:geoWithin "664.59";
+schema:numberOfItems "21967";
+schema:population "37686" .
+<http://labs.datahub.kr/egs/administrativearea/46790> schema:containedInPlace "전라남도";
+schema:name "화순군";
+schema:geoWithin "787.17";
+schema:numberOfItems "31976";
+schema:population "61254" .
+<http://labs.datahub.kr/egs/administrativearea/46800> schema:containedInPlace "전라남도";
+schema:name "장흥군";
+schema:geoWithin "622.38";
+schema:numberOfItems "19691";
+schema:population "35046" .
+<http://labs.datahub.kr/egs/administrativearea/46810> schema:containedInPlace "전라남도";
+schema:name "강진군";
+schema:geoWithin "500.9";
+schema:numberOfItems "18449";
+schema:population "32722" .
+<http://labs.datahub.kr/egs/administrativearea/46820> schema:containedInPlace "전라남도";
+schema:name "해남군";
+schema:geoWithin "1045.13";
+schema:numberOfItems "34916";
+schema:population "64575" .
+<http://labs.datahub.kr/egs/administrativearea/46830> schema:containedInPlace "전라남도";
+schema:name "영암군";
+schema:geoWithin "612.43";
+schema:numberOfItems "28817";
+schema:population "52350" .
+<http://labs.datahub.kr/egs/administrativearea/46840> schema:containedInPlace "전라남도";
+schema:name "무안군";
+schema:geoWithin "450.94";
+schema:numberOfItems "43436";
+schema:population "90296" .
+<http://labs.datahub.kr/egs/administrativearea/46860> schema:containedInPlace "전라남도";
+schema:name "함평군";
+schema:geoWithin "392.1";
+schema:numberOfItems "18065";
+schema:population "30601" .
+<http://labs.datahub.kr/egs/administrativearea/46870> schema:population "51750";
+schema:name "영광군";
+schema:numberOfItems "27602";
+schema:geoWithin "474.55";
+schema:containedInPlace "전라남도" .
+<http://labs.datahub.kr/egs/administrativearea/46880> schema:containedInPlace "전라남도";
+schema:name "장성군";
+schema:geoWithin "518.35";
+schema:numberOfItems "23400";
+schema:population "42543" .
+<http://labs.datahub.kr/egs/administrativearea/46890> schema:containedInPlace "전라남도";
+schema:name "완도군";
+schema:geoWithin "396.87";
+schema:numberOfItems "25602";
+schema:population "46641" .
+<http://labs.datahub.kr/egs/administrativearea/46900> schema:containedInPlace "전라남도";
+schema:name "진도군";
+schema:geoWithin "440.11";
+schema:numberOfItems "16548";
+schema:population "28979" .
+<http://labs.datahub.kr/egs/administrativearea/46910> schema:containedInPlace "전라남도";
+schema:name "신안군";
+schema:geoWithin "655.86";
+schema:numberOfItems "21946";
+schema:population "38037" .
+<http://labs.datahub.kr/egs/administrativearea/47110> schema:containedInPlace "경상북도";
+schema:name "포항시";
+schema:geoWithin "1130.72";
+schema:numberOfItems "233932";
+schema:population "493033" .
+<http://labs.datahub.kr/egs/administrativearea/47113> schema:name "포항시 북구";
+schema:containedInPlace "경상북도";
+schema:geoWithin "736.67";
+schema:numberOfItems "123293";
+schema:population "266755" .
+<http://labs.datahub.kr/egs/administrativearea/47111> schema:containedInPlace "경상북도";
+schema:name "포항시 남구";
+schema:geoWithin "394.05";
+schema:numberOfItems "110639";
+schema:population "226278" .
+<http://labs.datahub.kr/egs/administrativearea/47130> schema:containedInPlace "경상북도";
+schema:name "경주시";
+schema:geoWithin "1324.95";
+schema:numberOfItems "124577";
+schema:population "247489" .
+<http://labs.datahub.kr/egs/administrativearea/47150> schema:containedInPlace "경상북도";
+schema:name "김천시";
+schema:geoWithin "1010.05";
+schema:numberOfItems "69125";
+schema:population "137515" .
+<http://labs.datahub.kr/egs/administrativearea/47170> schema:containedInPlace "경상북도";
+schema:name "안동시";
+schema:geoWithin "1522.27";
+schema:numberOfItems "78283";
+schema:population "152935" .
+<http://labs.datahub.kr/egs/administrativearea/47190> schema:containedInPlace "경상북도";
+schema:name "구미시";
+schema:geoWithin "615.48";
+schema:numberOfItems "187139";
+schema:population "405506" .
+<http://labs.datahub.kr/egs/administrativearea/47210> schema:containedInPlace "경상북도";
+schema:name "영주시";
+schema:geoWithin "670.17";
+schema:numberOfItems "51423";
+schema:population "100199" .
+<http://labs.datahub.kr/egs/administrativearea/47230> schema:containedInPlace "경상북도";
+schema:name "영천시";
+schema:geoWithin "919.23";
+schema:numberOfItems "54976";
+schema:population "100212" .
+<http://labs.datahub.kr/egs/administrativearea/47250> schema:containedInPlace "경상북도";
+schema:name "상주시";
+schema:geoWithin "1254.71";
+schema:numberOfItems "49493";
+schema:population "93858" .
+<http://labs.datahub.kr/egs/administrativearea/47280> schema:containedInPlace "경상북도";
+schema:name "문경시";
+schema:geoWithin "912.05";
+schema:numberOfItems "36814";
+schema:population "68755" .
+<http://labs.datahub.kr/egs/administrativearea/47290> schema:geoWithin "411.88";
+schema:name "경산시";
+schema:containedInPlace "경상북도";
+schema:numberOfItems "129264";
+schema:population "266205" .
+<http://labs.datahub.kr/egs/administrativearea/47730> schema:containedInPlace "경상북도";
+schema:name "의성군";
+schema:geoWithin "1174.59";
+schema:numberOfItems "29471";
+schema:population "50086" .
+<http://labs.datahub.kr/egs/administrativearea/47750> schema:containedInPlace "경상북도";
+schema:name "청송군";
+schema:geoWithin "846.13";
+schema:numberOfItems "13999";
+schema:population "24019" .
+<http://labs.datahub.kr/egs/administrativearea/47760> schema:containedInPlace "경상북도";
+schema:name "영양군";
+schema:geoWithin "815.87";
+schema:numberOfItems "8994";
+schema:population "15661" .
+<http://labs.datahub.kr/egs/administrativearea/47770> schema:containedInPlace "경상북도";
+schema:name "영덕군";
+schema:geoWithin "741.28";
+schema:numberOfItems "19725";
+schema:population "34055" .
+<http://labs.datahub.kr/egs/administrativearea/47820> schema:containedInPlace "경상북도";
+schema:name "청도군";
+schema:geoWithin "695.36";
+schema:numberOfItems "23525";
+schema:population "41316" .
+<http://labs.datahub.kr/egs/administrativearea/47830> schema:containedInPlace "경상북도";
+schema:name "고령군";
+schema:geoWithin "384.24";
+schema:numberOfItems "17023";
+schema:population "30139" .
+<http://labs.datahub.kr/egs/administrativearea/47840> schema:containedInPlace "경상북도";
+schema:name "성주군";
+schema:geoWithin "616.15";
+schema:numberOfItems "24059";
+schema:population "42086" .
+<http://labs.datahub.kr/egs/administrativearea/47850> schema:containedInPlace "경상북도";
+schema:name "칠곡군";
+schema:geoWithin "451.05";
+schema:numberOfItems "54578";
+schema:population "110581" .
+<http://labs.datahub.kr/egs/administrativearea/47900> schema:containedInPlace "경상북도";
+schema:name "예천군";
+schema:geoWithin "661.58";
+schema:numberOfItems "28145";
+schema:population "55325" .
+<http://labs.datahub.kr/egs/administrativearea/47920> schema:containedInPlace "경상북도";
+schema:name "봉화군";
+schema:geoWithin "1202.7";
+schema:numberOfItems "16823";
+schema:population "29603" .
+<http://labs.datahub.kr/egs/administrativearea/47930> schema:containedInPlace "경상북도";
+schema:name "울진군";
+schema:geoWithin "990.63";
+schema:numberOfItems "25527";
+schema:population "46669" .
+<http://labs.datahub.kr/egs/administrativearea/47940> schema:containedInPlace "경상북도";
+schema:name "울릉군";
+schema:geoWithin "73.03";
+schema:numberOfItems "5605";
+schema:population "9077" .
+<http://labs.datahub.kr/egs/administrativearea/48120> schema:containedInPlace "경상남도";
+schema:geoWithin "10542.53";
+schema:name "경상남도";
+schema:numberOfItems "1525502";
+schema:population "3251158";
+schema:containedInPlace "경상남도";
+schema:name "창원시";
+schema:geoWithin "749.23";
+schema:numberOfItems "456830";
+schema:population "1009038" .
+<http://labs.datahub.kr/egs/administrativearea/48121> schema:containedInPlace "경상남도";
+schema:name "창원시 의창구";
+schema:geoWithin "204.26";
+schema:numberOfItems "96997";
+schema:population "213342" .
+<http://labs.datahub.kr/egs/administrativearea/48123> schema:containedInPlace "경상남도";
+schema:name "창원시 성산구";
+schema:geoWithin "89.11";
+schema:numberOfItems "106216";
+schema:population "245259" .
+<http://labs.datahub.kr/egs/administrativearea/48127> schema:containedInPlace "경상남도";
+schema:name "창원시 마산합포구";
+schema:geoWithin "241.2";
+schema:numberOfItems "85763";
+schema:population "179394";
+schema:containedInPlace "경상남도";
+schema:name "창원시 마산회원구";
+schema:geoWithin "90.61";
+schema:numberOfItems "82225";
+schema:population "179818" .
+<http://labs.datahub.kr/egs/administrativearea/48129> schema:containedInPlace "경상남도";
+schema:name "창원시 진해구";
+schema:geoWithin "124.04";
+schema:numberOfItems "85629";
+schema:population "191225" .
+<http://labs.datahub.kr/egs/administrativearea/48170> schema:containedInPlace "경상남도";
+schema:name "진주시";
+schema:geoWithin "712.94";
+schema:numberOfItems "159833";
+schema:population "341074" .
+<http://labs.datahub.kr/egs/administrativearea/48220> schema:containedInPlace "경상남도";
+schema:name "통영시";
+schema:geoWithin "239.91";
+schema:numberOfItems "59466";
+schema:population "120551" .
+<http://labs.datahub.kr/egs/administrativearea/48240> schema:containedInPlace "경상남도";
+schema:name "사천시";
+schema:geoWithin "398.82";
+schema:numberOfItems "55125";
+schema:population "109030" .
+<http://labs.datahub.kr/egs/administrativearea/48250> schema:containedInPlace "경상남도";
+schema:name "김해시";
+schema:geoWithin "463.55";
+schema:numberOfItems "231783";
+schema:population "533659" .
+<http://labs.datahub.kr/egs/administrativearea/48270> schema:containedInPlace "경상남도";
+schema:name "밀양시";
+schema:geoWithin "798.69";
+schema:numberOfItems "53906";
+schema:population "102084" .
+<http://labs.datahub.kr/egs/administrativearea/48310> schema:containedInPlace "경상남도";
+schema:name "거제시";
+schema:geoWithin "403.88";
+schema:numberOfItems "104565";
+schema:population "234038" .
+<http://labs.datahub.kr/egs/administrativearea/48330> schema:population "355122";
+schema:numberOfItems "158640";
+schema:geoWithin "485.7";
+schema:containedInPlace "경상남도";
+schema:name "양산시" .
+<http://labs.datahub.kr/egs/administrativearea/48720> schema:containedInPlace "경상남도";
+schema:name "의령군";
+schema:geoWithin "482.91";
+schema:numberOfItems "14923";
+schema:population "25475" .
+<http://labs.datahub.kr/egs/administrativearea/48730> schema:containedInPlace "경상남도";
+schema:name "함안군";
+schema:geoWithin "416.61";
+schema:numberOfItems "30566";
+schema:population "60203" .
+<http://labs.datahub.kr/egs/administrativearea/48740> schema:containedInPlace "경상남도";
+schema:name "창녕군";
+schema:geoWithin "532.67";
+schema:numberOfItems "32027";
+schema:population "57083" .
+<http://labs.datahub.kr/egs/administrativearea/48820> schema:containedInPlace "경상남도";
+schema:name "고성군";
+schema:geoWithin "518.02";
+schema:numberOfItems "26546";
+schema:population "49468" .
+<http://labs.datahub.kr/egs/administrativearea/48840> schema:containedInPlace "경상남도";
+schema:name "남해군";
+schema:geoWithin "357.78";
+schema:numberOfItems "22534";
+schema:population "40780" .
+<http://labs.datahub.kr/egs/administrativearea/48850> schema:containedInPlace "경상남도";
+schema:name "하동군";
+schema:geoWithin "675.3";
+schema:numberOfItems "23567";
+schema:population "41606" .
+<http://labs.datahub.kr/egs/administrativearea/48860> schema:containedInPlace "경상남도";
+schema:name "산청군";
+schema:geoWithin "794.71";
+schema:numberOfItems "19639";
+schema:population "33752" .
+<http://labs.datahub.kr/egs/administrativearea/48870> schema:containedInPlace "경상남도";
+schema:name "함양군";
+schema:geoWithin "724.73";
+schema:numberOfItems "20679";
+schema:population "36945" .
+<http://labs.datahub.kr/egs/administrativearea/48880> schema:containedInPlace "경상남도";
+schema:name "거창군";
+schema:geoWithin "803.96";
+schema:numberOfItems "30934";
+schema:population "60047" .
+<http://labs.datahub.kr/egs/administrativearea/48890> schema:containedInPlace "경상남도";
+schema:name "합천군";
+schema:geoWithin "983.12";
+schema:numberOfItems "23939";
+schema:population "41203" .
+<http://labs.datahub.kr/egs/administrativearea/50110> schema:containedInPlace "제주특별자치도";
+schema:name "제주특별자치도";
+schema:geoWithin "1850.27";
+schema:numberOfItems "313155";
+schema:population "675252";
+schema:containedInPlace "제주특별자치도";
+schema:name "제주시";
+schema:geoWithin "978.77";
+schema:numberOfItems "224433";
+schema:population "491654" .
+<http://labs.datahub.kr/egs/administrativearea/50130> schema:population "183598";
+schema:numberOfItems "88722";
+schema:containedInPlace "제주특별자치도";
+schema:geoWithin "871.51";
+schema:name "서귀포" .
