@@ -6,7 +6,7 @@
         <div class="flex items-center justify-between">
           <div class="flex items-center space-x-3 cursor-pointer group" @click="refreshPage">
             <div class="relative">
-              <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg rotate-3 transform group-hover:rotate-0 transition-transform duration-300">
+              <div class="w-10 h-10 bg-gradient-to-br from-indigo-500/80 via-purple-600/80 to-blue-500/80 rounded-2xl flex items-center justify-center shadow-lg rotate-3 transform group-hover:rotate-0 transition-transform duration-300">
                 <span class="text-white font-bold text-lg">S</span>
               </div>
               <div class="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full animate-pulse"></div>
@@ -30,8 +30,10 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <!-- Hero Search Section -->
       <div class="relative overflow-hidden mb-8">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-purple-600/20 to-pink-600/20 rounded-3xl transform rotate-1"></div>
-        <div class="relative bg-gradient-to-br from-indigo-600 via-purple-700 to-pink-600 rounded-3xl p-6 lg:p-8 text-white shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-400/15 via-slate-500/15 to-slate-600/15 rounded-3xl transform rotate-1"></div>
+        <!-- <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-purple-600/20 to-pink-600/20 rounded-3xl transform rotate-1"></div> -->
+        <!-- <div class="relative bg-gradient-to-br from-indigo-600 via-purple-700 to-pink-600 rounded-3xl p-6 lg:p-8 text-white shadow-2xl"> -->
+          <div class="relative bg-gradient-to-br from-blue-900/70 to-purple-700/70 rounded-3xl p-6 lg:p-8 text-white shadow-2xl backdrop-blur-sm">
           <!-- Background Pattern -->
           <div class="absolute inset-0 opacity-10">
             <div class="absolute top-0 left-0 w-40 h-40 bg-white rounded-full -translate-x-20 -translate-y-20"></div>
@@ -46,7 +48,7 @@
                 <span class="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">인사이트</span>를 
                 발견하세요
               </h2>
-              <p class="text-lg text-white/90 font-medium">자연어 질문으로 복합적인 데이터 분석을 수행합니다</p>
+              <!-- <p class="text-lg text-white/90 font-medium">자연어 질문으로 복합적인 데이터 분석을 수행합니다</p> -->
             </div>
             
             <!-- Search Input -->
@@ -298,7 +300,7 @@
             <div v-if="result.analysis">
               <!-- 키워드 박스탭 -->
               <div v-if="analysisKeywords.length > 0" class="mb-8">
-                <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                <h4 class="text-lg font-semibold text-gray-800 mb-4 flex">
                   <span class="w-6 h-6 bg-blue-100 text-blue-600 rounded-lg text-xs font-bold flex items-center justify-center mr-2">📊</span>
                   핵심 인사이트
                 </h4>
@@ -339,7 +341,7 @@
                     소득 분포 분석을 바탕으로 더 깊이 있는 인사이트를 발견해보세요.
                   </p>
                   <button
-                    @click="executeAdvancedQuery"
+                    @click="onClickExecuteAdvancedQuery"
                     :disabled="loading"
                     class="group flex items-center gap-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
@@ -360,34 +362,6 @@
             </div>
           </div>
         </div>
-
-        <!-- 1.5. Reasoning Steps Section (Advanced queries only) -->
-        <div v-if="result.reasoningSteps?.length" class="bg-white rounded-2xl shadow-lg border border-gray-200/60 overflow-hidden">
-          <div class="px-6 lg:px-8 py-6 border-b border-gray-100">
-            <h3 class="text-xl font-bold text-gray-800 flex items-center">
-              <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg text-sm font-bold flex items-center justify-center mr-3">🧠</span>
-              추론 과정
-            </h3>
-          </div>
-          <div class="px-6 lg:px-8 py-8">
-            <div class="space-y-6">
-              <div v-for="step in result.reasoningSteps" :key="step.step" 
-                   class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
-                <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-lg flex items-center justify-center text-sm font-bold">
-                  {{ step.step }}
-                </div>
-                <div class="flex-1">
-                  <h4 class="font-semibold text-gray-800 mb-2">{{ step.title }}</h4>
-                  <p class="text-gray-600 text-sm mb-2">{{ step.description }}</p>
-                  <div class="text-xs text-gray-500 bg-white px-3 py-2 rounded-lg border">
-                    <code>{{ step.detail }}</code>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- 2. Visualization Section -->
         <div class="bg-white rounded-2xl shadow-lg border border-gray-200/60 overflow-hidden">
           <div class="px-6 lg:px-8 py-6 border-b border-gray-100">
@@ -395,7 +369,7 @@
               <h3 class="text-xl font-bold text-gray-800 flex items-center">
                 <span class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg text-sm font-bold flex items-center justify-center mr-3">2</span>
                 <span v-if="shouldShowMap">충전소 위치 지도</span>
-                <span v-else-if="result.queryType === 3">복지 취약성 분석</span>
+                <span v-else-if="result.queryType === 3">복지 취약성 분석</span>  
                 <span v-else-if="shouldShowAdvancedChart">소득과 충전소 상관관계 분석</span>
                 <span v-else>데이터 시각화</span>
               </h3>
@@ -448,8 +422,30 @@
             </div>
             
             <!-- Bar Chart for Query 2, 4 -->
-            <div v-else-if="shouldShowBarChart" class="h-96 relative">
-              <canvas ref="chartCanvas"></canvas>
+            <div v-else-if="shouldShowBarChart" class="h-[500px] relative">
+              <!-- Query 2: 소득 분포 - 좌우 분리된 차트 -->
+              <div v-if="result.queryType === 2" class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
+                <!-- 상위 10개 지역 -->
+                <div class="bg-gray-50 rounded-xl p-4">
+                  <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">상위 10개 지역</h4>
+                  <div class="h-80">
+                    <canvas ref="topChartCanvas"></canvas>
+                  </div>
+                </div>
+                <!-- 하위 10개 지역 -->
+                <div class="bg-gray-50 rounded-xl p-4">
+                  <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">하위 10개 지역</h4>
+                  <div class="h-80">
+                    <canvas ref="bottomChartCanvas"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- Query 4: 일반 바 차트 -->
+              <div v-else>
+                <div class="relative w-full h-[500px]">
+                  <canvas ref="chartCanvas" style="width:100%;height:100%"></canvas>
+                </div>
+              </div>
             </div>
             
             <!-- Pie Chart for Query 3 (legacy) -->
@@ -462,6 +458,33 @@
               <div class="text-center">
                 <div class="text-4xl mb-4">📊</div>
                 <p class="text-lg">시각화할 수 있는 데이터가 없습니다</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.5. Reasoning Steps Section (Advanced queries only) -->
+        <div v-if="result.reasoningSteps?.length" class="bg-white rounded-2xl shadow-lg border border-gray-200/60 overflow-hidden">
+          <div class="px-6 lg:px-8 py-6 border-b border-gray-100">
+            <h3 class="text-xl font-bold text-gray-800 flex items-center">
+              <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg text-sm font-bold flex items-center justify-center mr-3">🧠</span>
+              추론 과정
+            </h3>
+          </div>
+          <div class="px-6 lg:px-8 py-8">
+            <div class="space-y-6">
+              <div v-for="step in result.reasoningSteps" :key="step.step" 
+                   class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border border-gray-200">
+                <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-lg flex items-center justify-center text-sm font-bold">
+                  {{ step.step }}
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-semibold text-gray-800 mb-2">{{ step.title }}</h4>
+                  <p class="text-gray-600 text-sm mb-2">{{ step.description }}</p>
+                  <div class="text-xs text-gray-500 bg-white px-3 py-2 rounded-lg border">
+                    <code>{{ step.detail }}</code>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -540,6 +563,7 @@
               데이터 출처
             </h3>
           </div>
+
           <div class="px-6 lg:px-8 py-6">
             <div v-if="result.queryType === 1" class="space-y-4">
               <div class="flex items-start space-x-3">
@@ -555,7 +579,7 @@
                             <span class="ml-2">🔗</span>
                         </a>
                     </div>
-                <p class="text-sm text-gray-600 mb-2">전국의 전기차 충전소 위치 및 운영 정보를 제공하는 공공데이터</p>
+                <!-- <p class="text-sm text-gray-600 mb-2">전국의 전기차 충전소 위치 및 운영 정보를 제공하는 공공데이터</p> -->
                 </div>
               </div>
             </div>
@@ -563,14 +587,60 @@
             <div v-else-if="result.queryType === 2" class="space-y-4">
               <div class="flex items-start space-x-3">
                 <div class="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div>
+                <div class="flex">
                   <h4 class="font-semibold text-gray-800 mb-1">지역별 소득 데이터</h4>
-                  <p class="text-sm text-gray-600 mb-2">통계청 및 관련 기관에서 제공하는 지역별 평균소득 통계 정보</p>
+                      <a href="https://www.data.go.kr/data/15082063/fileData.do" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-3 text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
+                          <span class="ml-2">🔗</span>
+                        </a>
+                  <!-- <p class="text-sm text-gray-600 mb-2">통계청 및 관련 기관에서 제공하는 지역별 평균소득 통계 정보</p> -->
                 </div>
               </div>
             </div>
-            
+
             <div v-else-if="result.queryType === 3" class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="flex">
+                  <!-- <div class="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div> -->
+                  <h4 class="font-semibold text-gray-800 mb-1">전국버스정류장위치데이터</h4>
+                      <a href="https://www.data.go.kr/data/15067528/fileData.do" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-3 text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
+                          <span class="ml-2">🔗</span>
+                        </a>
+                  <!-- <p class="text-sm text-gray-600 mb-2">통계청 및 관련 기관에서 제공하는 지역별 평균소득 통계 정보</p> -->
+                </div>
+
+                <div class="flex">
+                  <!-- <div class="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div> -->
+                  <h4 class="font-semibold text-gray-800 mb-1">전국복지수급데이터</h4>
+                      <a href="https://www.data.go.kr/data/15067528/fileData.do" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-3 text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
+                          <span class="ml-2">🔗</span>
+                        </a>
+                  <!-- <p class="text-sm text-gray-600 mb-2">통계청 및 관련 기관에서 제공하는 지역별 평균소득 통계 정보</p> -->
+                </div>
+
+                <div class="flex">
+                  <!-- <div class="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div> -->
+                  <h4 class="font-semibold text-gray-800 mb-1">행정구역표준데이터(인구수, 면적)</h4>
+                      <a href="https://www.data.go.kr/data/15067528/fileData.do" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-3 text-sm text-indigo-600 hover:text-indigo-800 transition-colors">
+                          <span class="ml-2">🔗</span>
+                        </a>
+                  <!-- <p class="text-sm text-gray-600 mb-2">통계청 및 관련 기관에서 제공하는 지역별 평균소득 통계 정보</p> -->
+                </div>
+              </div>
+            </div>
+          
+            <div v-else-if="result.queryType === 4" class="space-y-4">
               <div class="flex items-start space-x-3">
                 <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                 <div>
@@ -584,33 +654,8 @@
               </div>
             </div>
             
-            <div v-else-if="result.queryType === 4" class="space-y-4">
-              <div v-if="shouldShowAdvancedChart" class="flex items-start space-x-3">
-                <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 class="font-semibold text-gray-800 mb-1">전기차 충전소 및 소득 데이터</h4>
-                  <p class="text-sm text-gray-600 mb-2">전기차 충전소 위치 데이터와 지역별 소득 데이터를 결합한 고급 분석</p>
-                  <div class="text-sm text-gray-500">
-                    <span>⚡</span>
-                    <span class="ml-1">전기차 충전소 표준데이터 + 지역별 소득 통계</span>
-                  </div>
-                </div>
-              </div>
-              <div v-else class="flex items-start space-x-3">
-                <div class="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h4 class="font-semibold text-gray-800 mb-1">교통 인프라 데이터</h4>
-                  <p class="text-sm text-gray-600 mb-2">국토교통부 및 지방자치단체에서 제공하는 대중교통 시설 정보</p>
-                  <div class="text-sm text-gray-500">
-                    <span>🚌</span>
-                    <span class="ml-1">국토교통부, 지자체 교통데이터 활용</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
             <!-- 공통 메시지 -->
-            <div class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <!-- <div class="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
               <div class="flex items-start space-x-2">
                 <span class="text-gray-500 text-sm mt-0.5">ℹ️</span>
                 <div class="text-sm text-gray-600">
@@ -618,7 +663,7 @@
                   <p>모든 데이터는 공공기관에서 공식적으로 제공하는 정보를 기반으로 하며, 정기적으로 업데이트됩니다. 단, 데이터 수집 시점에 따라 최신 정보와 차이가 있을 수 있습니다.</p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -671,6 +716,8 @@ const pieChartCanvas = ref(null)
 const mapContainer = ref(null)
 const welfareLineChart = ref(null)
 const welfareBarChart = ref(null)
+const topChartCanvas = ref(null)
+const bottomChartCanvas = ref(null)
 const welfareChartType = ref('line')
 const isAdvancedQuery = ref(false)
 const currentTipIndex = ref(0)
@@ -688,11 +735,16 @@ let currentChart = null
 let currentPieChart = null
 let currentWelfareLineChart = null
 let currentWelfareBarChart = null
+let currentTopChart = null
+let currentBottomChart = null
 let currentMap = null
 let currentTileLayer = null
 const currentMapStyle = ref('openstreetmap')
 
-const API_BASE_URL = 'http://localhost:8000'
+// const API_BASE_URL = 'http://localhost:8000/api'
+
+const config = useRuntimeConfig()
+const API_BASE_URL = config.public.apiUrl
 
 const mapStyleOptions = {
   openstreetmap: {
@@ -708,9 +760,9 @@ const mapStyleOptions = {
 }
 
 const sampleQueries = [
-  { title: '전기차 충전소', query: '서울특별시 동작구의 전기차 충전소 위치 확인', difficulty: 'basic' },
-  { title: '소득 분포', query: '지역별 소득 분포 현황을 분석', difficulty: 'basic' },
-  { title: '복지수급 + 버스정류장', query: '면적 대비 버스정류장 수와 복지수급자 수의 비율이 낮은 지역은 어디인가요?', difficulty: 'advanced' }
+  { title: '전기차 충전소', query: '서울특별시 동작구의 전기차 충전소 위치를 확인해줘', difficulty: 'basic' },
+  { title: '소득 분포', query: '지역별 소득 분포 현황을 분석해줘', difficulty: 'basic' },
+  { title: '복지수급 + 버스정류장', query: '면적 대비 버스정류장 수와 복지수급자 수의 비율이 낮은 지역은 어디야?', difficulty: 'advanced' }
 ]
 
 const analysisTips = [
@@ -802,7 +854,7 @@ const shouldShowBarChart = computed(() => {
 })
 
 const shouldShowAdvancedChart = computed(() => {
-  return result.value?.queryType === 4 && result.value.data?.analysisType === 'advanced'
+  return result.value?.queryType === 4 && result.value.data?.districts?.length > 0
 })
 
 const shouldShowPieChart = computed(() => {
@@ -913,35 +965,34 @@ const executeQuery = async () => {
 const executeAdvancedQuery = async () => {
   loading.value = true
   destroyCharts()
-  
-  // 고급 분석 진행 상태 설정 (query3처럼)
+
+  // 복지 분석 진행 상태 설정 (query3)
   complexReasoningProgress.value = {
     isActive: true,
     currentStep: 0,
-    totalSteps: 4,
+    totalSteps: 3,
     stepTitle: '',
     stepDescription: ''
   }
-  
+
   try {
-    // 고급 분석 단계 시뮬레이션
-    await simulateAdvancedReasoningSteps()
-    
-    const response = await fetch(`${API_BASE_URL}/query/analyze/advanced`, {
+    await simulateComplexReasoningSteps()
+
+    const response = await fetch(`${API_BASE_URL}/query/analyze`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        query: "지역별 전기차 충전소 개수는 소득 수준과 상관성이 있을까?",
-        queryType: 4
+      body: JSON.stringify({
+        query: '복지 취약성 분석',
+        queryType: 3
       })
     })
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
-    
+
     const data = await response.json()
-    
+
     result.value = {
       success: data.success,
       queryType: data.queryType,
@@ -950,7 +1001,7 @@ const executeAdvancedQuery = async () => {
       results: data.results,
       analysis: data.analysis,
       keywords: data.keywords || [],
-      reasoningSteps: generateAdvancedReasoningSteps(),
+      reasoningSteps: generateReasoningSteps(3),
       error: data.success ? null : data.message
     }
 
@@ -958,12 +1009,12 @@ const executeAdvancedQuery = async () => {
       await nextTick()
       await drawChart()
     }
-    
+
   } catch (err) {
-    console.error('Advanced query execution error:', err)
-    result.value = { 
-      success: false, 
-      error: `고급 분석 중 오류가 발생했습니다: ${err.message}`
+    console.error('복지 분석 실행 오류:', err)
+    result.value = {
+      success: false,
+      error: `복지 분석 중 오류가 발생했습니다: ${err.message}`
     }
   } finally {
     loading.value = false
@@ -1166,6 +1217,14 @@ const destroyCharts = () => {
     currentWelfareBarChart.destroy()
     currentWelfareBarChart = null
   }
+  if (currentTopChart) {
+    currentTopChart.destroy()
+    currentTopChart = null
+  }
+  if (currentBottomChart) {
+    currentBottomChart.destroy()
+    currentBottomChart = null
+  }
   if (currentMap) {
     currentMap.remove()
     currentMap = null
@@ -1185,14 +1244,15 @@ const drawChart = async () => {
       const { Chart, registerables } = await import('chart.js')
       Chart.register(...registerables)
       await drawWelfareCharts(Chart)
-    } else if (queryType === 4 && shouldShowAdvancedChart.value) {
+    } else if (queryType === 4) {
+      // Query 4: 소득-충전소 상관관계 산점도
       const { Chart, registerables } = await import('chart.js')
       Chart.register(...registerables)
-      await drawAdvancedChart(Chart)
-    } else if (queryType === 2 || queryType === 4) {
+      await drawScatterChart(Chart)  // 산점도 사용
+    } else if (queryType === 2) {
       const { Chart, registerables } = await import('chart.js')
       Chart.register(...registerables)
-      await drawBarChart(Chart)
+      await drawIncomeCharts(Chart)
     }
   } catch (error) {
     console.error('Chart drawing error:', error)
@@ -1667,17 +1727,17 @@ const drawAdvancedChart = async (Chart) => {
                   return `${label}: ${value}개`
                 }
               }
-            }
-          },
-          title: {
-            display: true,
-            text: `상관계수: ${correlation.toFixed(3)} (${correlation > 0.5 ? '강한 양의 상관관계' : correlation > 0.3 ? '중간 상관관계' : '약한 상관관계'})`,
-            color: '#374151',
-            font: {
-              size: 14,
-              weight: 'bold'
             },
-            padding: 20
+            title: {
+              display: true,
+              text: `상관계수: ${correlation.toFixed(3)} (${correlation > 0.5 ? '강한 양의 상관관계' : correlation > 0.3 ? '중간 상관관계' : '약한 상관관계'})`,
+              color: '#374151',
+              font: {
+                size: 14,
+                weight: 'bold'
+              },
+              padding: 20
+            }
           }
         },
         scales: {
@@ -1740,115 +1800,315 @@ const drawAdvancedChart = async (Chart) => {
   }
 }
 
-// 복지 차트 타입 변경 시 차트 다시 그리기
-watch(welfareChartType, async (newType) => {
-  if (result.value?.queryType === 3 && result.value?.results?.length) {
-    await nextTick()
-    const { Chart, registerables } = await import('chart.js')
-    Chart.register(...registerables)
-    
-    if (newType === 'line') {
-      await drawWelfareLineChart(Chart)
-    } else if (newType === 'bar') {
-      await drawWelfareBarChart(Chart)
-    }
+// 소득 분포 차트 그리기 (상위 10개, 하위 10개 분리)
+const drawIncomeCharts = async (Chart) => {
+  if (!result.value?.results?.length) return
+
+  // 기존 차트 정리
+  if (currentTopChart) {
+    currentTopChart.destroy()
+    currentTopChart = null
   }
-})
+  if (currentBottomChart) {
+    currentBottomChart.destroy()
+    currentBottomChart = null
+  }
 
-const drawBarChart = async (Chart) => {
-  if (!chartCanvas.value) return
+  try {
+    // 소득 데이터 정렬
+    const sortedData = result.value.results
+      .map(r => ({
+        region: r.지역명 || '알 수 없음',
+        income: parseInt(r.평균소득 || r.income || 0) || 0
+      }))
+      .sort((a, b) => b.income - a.income)
 
-  destroyCharts()
+    // 전체 데이터에서 최댓값 찾기
+    const maxIncome = Math.max(...sortedData.map(d => d.income))
+    // 여유 공간을 위해 10% 추가
+    const yAxisMax = Math.ceil(maxIncome * 1.1)
+
+    // 상위 10개와 하위 10개 선택
+    const topRegions = sortedData.slice(0, 10)
+    const bottomRegions = sortedData.slice(-10).reverse() // 역순으로 정렬하여 가장 낮은 것부터
+
+    // 공통 y축 설정 옵션
+    const yAxisOptions = {
+      beginAtZero: true,
+      max: yAxisMax, // 동일한 최댓값 설정
+      grid: {
+        color: '#F3F4F6',
+        drawBorder: false
+      },
+      ticks: {
+        color: '#6B7280',
+        font: {
+          size: 11
+        },
+        callback: function(value) {
+          return value.toLocaleString() + '만원'
+        }
+      }
+    }
+
+    // 상위 10개 차트
+    if (topChartCanvas.value) {
+      const topCtx = topChartCanvas.value.getContext('2d')
+      
+      currentTopChart = new Chart(topCtx, {
+        type: 'bar',
+        data: {
+          labels: topRegions.map(d => {
+            const name = d.region
+            return name.length > 8 ? name.substring(0, 8) + '...' : name
+          }),
+          datasets: [{
+            label: '평균소득 (만원)',
+            data: topRegions.map(d => d.income),
+            backgroundColor: '#10B981', // Emerald-500
+            borderRadius: 8,
+            borderColor: '#ffffff',
+            borderWidth: 2,
+            borderSkipped: false,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              titleColor: '#ffffff',
+              bodyColor: '#ffffff',
+              borderColor: '#374151',
+              borderWidth: 1,
+              cornerRadius: 8,
+              callbacks: {
+                label: function(context) {
+                  return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}만원`
+                }
+              }
+            }
+          },
+          scales: {
+            y: yAxisOptions, // 공통 y축 옵션 적용
+            x: {
+              grid: {
+                display: false
+              },
+              ticks: {
+                color: '#6B7280',
+                font: {
+                  size: 10
+                },
+                maxRotation: 45,
+                minRotation: 0
+              }
+            }
+          },
+          interaction: {
+            intersect: false,
+            mode: 'index'
+          }
+        }
+      })
+    }
+
+    // 하위 10개 차트
+    if (bottomChartCanvas.value) {
+      const bottomCtx = bottomChartCanvas.value.getContext('2d')
+      
+      currentBottomChart = new Chart(bottomCtx, {
+        type: 'bar',
+        data: {
+          labels: bottomRegions.map(d => {
+            const name = d.region
+            return name.length > 8 ? name.substring(0, 8) + '...' : name
+          }),
+          datasets: [{
+            label: '평균소득 (만원)',
+            data: bottomRegions.map(d => d.income),
+            backgroundColor: '#F59E0B', // Amber-500
+            borderRadius: 8,
+            borderColor: '#ffffff',
+            borderWidth: 2,
+            borderSkipped: false,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              titleColor: '#ffffff',
+              bodyColor: '#ffffff',
+              borderColor: '#374151',
+              borderWidth: 1,
+              cornerRadius: 8,
+              callbacks: {
+                label: function(context) {
+                  return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}만원`
+                }
+              }
+            }
+          },
+          scales: {
+            y: yAxisOptions, // 공통 y축 옵션 적용
+            x: {
+              grid: {
+                display: false
+              },
+              ticks: {
+                color: '#6B7280',
+                font: {
+                  size: 10
+                },
+                maxRotation: 45,
+                minRotation: 0
+              }
+            }
+          },
+          interaction: {
+            intersect: false,
+            mode: 'index'
+          }
+        }
+      })
+    }
+
+  } catch (error) {
+    console.error('Income charts creation error:', error)
+  }
+}
+
+// query4 산점도 차트
+const drawScatterChart = async (Chart) => {
+  if (!chartCanvas.value) {
+    console.warn('chartCanvas ref가 없습니다')
+    return
+  }
+
+  // 기존 차트 정리
+  if (currentChart) {
+    currentChart.destroy()
+    currentChart = null
+  }
 
   try {
     const ctx = chartCanvas.value.getContext('2d')
-    const queryType = result.value.queryType
     
-    let labels = []
-    let datasets = []
-    let chartOptions = {}
+    // Query 4 데이터 추출
+    const districts = result.value.data?.districts || []
+    const correlation = result.value.data?.correlation || {}
+    
+    if (districts.length === 0) {
+      console.warn('산점도용 데이터가 없습니다')
+      return
+    }
 
-    if (queryType === 1) { // 전기차 충전소
-      const firstResult = result.value.results[0]
-      if (firstResult?.충전소명) {
-        labels = result.value.results.slice(0, 8).map(r => {
-          const name = r.충전소명 || '충전소'
-          return name.length > 10 ? name.substring(0, 10) + '...' : name
-        })
-        datasets = [{
-          label: '충전소 개수',
-          data: result.value.results.slice(0, 8).map(() => 1),
-          backgroundColor: '#4F46E5',
-          borderRadius: 6,
-          borderColor: '#ffffff',
-          borderWidth: 1
-        }]
-      } else {
-        labels = result.value.results.slice(0, 8).map(r => r.구명 || r.지역명 || '알 수 없음')
-        datasets = [{
-          label: '충전소 개수',
-          data: result.value.results.slice(0, 8).map(r => {
-            const count = r.충전소수 || r.count || 0
-            return parseInt(count) || 0
-          }),
-          backgroundColor: '#4F46E5',
-          borderRadius: 6,
-          borderColor: '#ffffff',
-          borderWidth: 1
-        }]
-      }
-    } else if (queryType === 2) { // 소득 분포 - 상위/하위 10개씩
-      // 소득 데이터 정렬
-      const sortedData = result.value.results
-        .map(r => ({
-          region: r.지역명 || '알 수 없음',
-          income: parseInt(r.평균소득 || r.income || 0) || 0
-        }))
-        .sort((a, b) => b.income - a.income)
+    console.log('산점도 데이터 확인:', {
+      districts: districts.length,
+      correlation: correlation.coefficient,
+      sampleData: districts.slice(0, 3)
+    })
 
-      // 상위 10개와 하위 10개 선택
-      const topRegions = sortedData.slice(0, 10)
-      const bottomRegions = sortedData.slice(-10).reverse() // 역순으로 정렬하여 가장 낮은 것부터
+    // 산점도 데이터 포인트 생성
+    const scatterData = districts.map(d => ({
+      x: d.income || 0,           // X축: 소득
+      y: d.chargerCount || 0,     // Y축: 충전소 수 (수정됨!)
+      label: d.name || '알 수 없음'
+    })).filter(point => point.x > 0 && point.y > 0) // 유효한 데이터만
 
-      // 라벨과 데이터 구성
-      labels = [...topRegions.map(d => d.region), ...bottomRegions.map(d => d.region)]
+    console.log('산점도 포인트:', scatterData.slice(0, 3))
+
+    // 추세선 계산
+    let trendlineData = []
+    if (scatterData.length > 1) {
+      const x = scatterData.map(d => d.x)
+      const y = scatterData.map(d => d.y)
       
-      datasets = [
-        {
-          label: '높은 소득 지역 (Top10)',
-          data: [...topRegions.map(d => d.income), ...new Array(bottomRegions.length).fill(null)],
-          backgroundColor: '#10B981', // Emerald-500
-          borderRadius: 8,
-          borderColor: '#ffffff',
-          borderWidth: 2,
-          borderSkipped: false,
-        },
-        {
-          label: '낮은 소득 지역 (Top10)',
-          data: [...new Array(topRegions.length).fill(null), ...bottomRegions.map(d => d.income)],
-          backgroundColor: '#F59E0B', // Amber-500
-          borderRadius: 8,
-          borderColor: '#ffffff',
-          borderWidth: 2,
-          borderSkipped: false,
-        }
-      ]
+      const n = x.length
+      const meanX = x.reduce((a, b) => a + b, 0) / n
+      const meanY = y.reduce((a, b) => a + b, 0) / n
+      
+      let numerator = 0
+      let denominator = 0
+      
+      for (let i = 0; i < n; i++) {
+        numerator += (x[i] - meanX) * (y[i] - meanY)
+        denominator += (x[i] - meanX) ** 2
+      }
+      
+      if (denominator !== 0) {
+        const slope = numerator / denominator
+        const intercept = meanY - slope * meanX
+        
+        const minX = Math.min(...x)
+        const maxX = Math.max(...x)
+        
+        trendlineData = [
+          { x: minX, y: slope * minX + intercept },
+          { x: maxX, y: slope * maxX + intercept }
+        ]
+        
+        console.log('추세선 계산 완료:', { slope, intercept, points: trendlineData })
+      }
+    }
 
-      chartOptions = {
+    // 차트 생성
+    const datasets = [
+      {
+        label: '지역별 소득-충전소 분포',
+        data: scatterData,
+        backgroundColor: 'rgba(99, 102, 241, 0.7)',
+        borderColor: 'rgba(99, 102, 241, 1)',
+        pointRadius: 8,
+        pointHoverRadius: 12,
+        pointBorderWidth: 2,
+        pointBorderColor: '#ffffff'
+      }
+    ]
+
+    // 추세선이 있으면 추가
+    if (trendlineData.length > 0) {
+      datasets.push({
+        type: 'line',
+        label: `추세선 (r=${(correlation.coefficient || 0).toFixed(3)})`,
+        data: trendlineData,
+        borderColor: '#EF4444', // 빨간색으로 변경
+        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+        borderWidth: 4, // 기존 3에서 4로 증가
+        fill: false,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0,
+        order: 1
+      })
+    }
+
+    currentChart = new Chart(ctx, {
+      type: 'scatter',
+      data: { datasets },
+      options: {
         responsive: true,
         maintainAspectRatio: false,
+        aspectRatio: 1.5,
         plugins: {
           legend: {
             display: true,
             position: 'top',
             labels: {
-              font: {
-                size: 13,
-                weight: '500'
-              },
+              font: { size: 12, weight: '500' },
               color: '#374151',
               usePointStyle: true,
-              padding: 20
+              padding: 15
             }
           },
           tooltip: {
@@ -1860,113 +2120,78 @@ const drawBarChart = async (Chart) => {
             cornerRadius: 8,
             displayColors: true,
             callbacks: {
+              title: function(context) {
+                if (context.length > 0) {
+                  const point = context[0].raw
+                  return point.label || '지역'
+                }
+                return ''
+              },
               label: function(context) {
-                return `${context.dataset.label}: ${context.parsed.y?.toLocaleString() || 0}만원`
+                const point = context.raw
+                if (context.dataset.label.includes('추세선')) {
+                  return null // 추세선 툴팁은 숨김
+                }
+                return [
+                  `평균소득: ${point.x.toLocaleString()}만원`,
+                  `충전소 수: ${point.y}개`
+                ]
+              },
+              afterBody: function() {
+                const corr = correlation.coefficient || 0
+                const strength = correlation.strength || '알 수 없음'
+                return `\n상관계수: ${corr.toFixed(3)} (${strength})`
               }
             }
           }
         },
         scales: {
-          y: {
-            beginAtZero: true,
-            grid: {
-              color: '#F3F4F6',
-              drawBorder: false
+          x: {
+            title: {
+              display: true,
+              text: '평균소득 (만원)',
+              color: '#374151',
+              font: { size: 13, weight: 'bold' }
             },
             ticks: {
               color: '#6B7280',
-              font: {
-                size: 11
-              },
+              font: { size: 11 },
               callback: function(value) {
                 return value.toLocaleString() + '만원'
               }
-            }
-          },
-          x: {
-            grid: {
-              display: false
             },
-            ticks: {
-              color: '#6B7280',
-              font: {
-                size: 11
+            grid: { color: '#F3F4F6' }
+          },
+          y: {
+            title: {
+              display: true,
+              text: '전기차 충전소 수 (개)',
+              color: '#374151',
+              font: { size: 13, weight: 'bold' }
+            },
+              max: 200,
+              ticks: {
+                color: '#6B7280',
+                font: { size: 11 },
+                stepSize: 50, // 한 칸의 크기를 50으로 설정
+                callback: function(value) {
+                  return value + '개'
+                }
               },
-              maxRotation: 45,
-              minRotation: 0
-            }
+              grid: { color: '#F3F4F6' }
           }
         },
         interaction: {
           intersect: false,
-          mode: 'index'
+          mode: 'point'
         }
       }
-    } else if (queryType === 4) { // 교통
-      const processedData = result.value.results
-        .map(r => {
-          const population = parseInt(r.인구수 || r.population || 1) || 1
-          const stations = parseInt(r.정류장수 || r.stations || 0) || 0
-          return {
-            name: r.지역명 || '알 수 없음',
-            density: (stations / population) * 1000
-          }
-        })
-        .sort((a, b) => b.density - a.density)
-        .slice(0, 8)
-      
-      labels = processedData.map(d => d.name)
-      datasets = [{
-        label: '정류장 밀도 (개/천명)',
-        data: processedData.map(d => parseFloat(d.density.toFixed(2))),
-        backgroundColor: '#8B5CF6',
-        borderRadius: 6,
-        borderColor: '#ffffff',
-        borderWidth: 1
-      }]
-    }
-
-    if (labels.length === 0 || datasets.length === 0) {
-      console.warn('No data available for chart')
-      return
-    }
-
-    // 기본 옵션 설정 (queryType 2가 아닌 경우)
-    if (queryType !== 2) {
-      chartOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            grid: {
-              color: '#f3f4f6'
-            }
-          },
-          x: {
-            grid: {
-              display: false
-            }
-          }
-        }
-      }
-    }
-
-    currentChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels,
-        datasets
-      },
-      options: chartOptions
     })
+
+    console.log('산점도 차트 생성 완료')
+
   } catch (error) {
-    console.error('Bar chart creation error:', error)
+    console.error('산점도 차트 생성 오류:', error)
   }
 }
 
@@ -2083,6 +2308,73 @@ const drawMap = async () => {
     console.error('Map creation error:', error)
   }
 }
+
+// 복지(3) 분석 실행 및 결과 반영 함수
+const onClickExecuteAdvancedQuery = async () => {
+  if (loading.value) return
+  
+  // 사용자 쿼리도 업데이트
+  userQuery.value = '지역별 소득과 전기차 충전소 개수의 상관관계를 분석해줘'
+  
+  loading.value = true
+  destroyCharts()
+  
+  // 고급 분석 진행 상태 설정 (query4 - 소득과 충전소 상관관계)
+  complexReasoningProgress.value = {
+    isActive: true,
+    currentStep: 0,
+    totalSteps: 4,
+    stepTitle: '',
+    stepDescription: ''
+  }
+
+  try {
+    await simulateAdvancedReasoningSteps()
+
+    const response = await fetch(`${API_BASE_URL}/query/analyze/advanced`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: '지역별 소득과 전기차 충전소 개수의 상관관계를 분석해줘',
+        queryType: 4
+      })
+    })
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+
+    const data = await response.json()
+
+    result.value = {
+      success: data.success,
+      queryType: data.queryType,
+      sparqlQuery: data.sparqlQuery,
+      data: data.data,
+      results: data.results,
+      analysis: data.analysis,
+      keywords: data.keywords || [],
+      reasoningSteps: generateAdvancedReasoningSteps(),
+      error: data.success ? null : data.message
+    }
+
+    if (data.success && data.results?.length) {
+      await nextTick()
+      await drawChart()
+    }
+
+  } catch (err) {
+    console.error('고급 분석 실행 오류:', err)
+    result.value = {
+      success: false,
+      error: `고급 분석 중 오류가 발생했습니다: ${err.message}`
+    }
+  } finally {
+    loading.value = false
+    complexReasoningProgress.value.isActive = false
+  }
+}
+
 
 // 컴포넌트 언마운트 시 차트 정리
 onUnmounted(() => {
