@@ -19,7 +19,7 @@ RUN pip install --upgrade pip && \
 # 소스 복사
 COPY . .
 
-EXPOSE 8000
+EXPOSE 8001
 
 # FastAPI 실행 (uvicorn)
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--log-level", "warning"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001", "--log-level", "warning"]
