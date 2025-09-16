@@ -10,4 +10,12 @@ export default defineNuxtConfig({
     injectPosition: 0,
     viewer: false,
   },
+  app: {
+    baseURL: '/projects/shannon-insight/',
+  },
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.VITE_API_URL
+    }
+  }
 })
