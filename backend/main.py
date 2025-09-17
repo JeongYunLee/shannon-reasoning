@@ -569,6 +569,21 @@ async def analyze_query(request: AnalyzeQueryRequest):
     # 결과 처리
     try:
         processed_data = process_query_results(query_type, results)
+
+        # numpy 타입 변환 안전장치
+        def sanitize_for_json(obj):
+            if isinstance(obj, (np.bool_, np.integer, np.floating)):
+                return obj.item()
+            elif isinstance(obj, np.ndarray):
+                return obj.tolist()
+            elif isinstance(obj, dict):
+                return {k: sanitize_for_json(v) for k, v in obj.items()}
+            elif isinstance(obj, list):
+                return [sanitize_for_json(item) for item in obj]
+            return obj
+
+        # 응답 전에 데이터 정리
+        processed_data = sanitize_for_json(processed_data)
         
         return AnalyzeQueryResponse(
             success=True,
@@ -662,6 +677,21 @@ async def analyze_advanced_query(request: AnalyzeQueryRequest):
         
         # 결과 처리
         processed_data = process_query_results(query_type, results)
+
+        # numpy 타입 변환 안전장치
+        def sanitize_for_json(obj):
+            if isinstance(obj, (np.bool_, np.integer, np.floating)):
+                return obj.item()
+            elif isinstance(obj, np.ndarray):
+                return obj.tolist()
+            elif isinstance(obj, dict):
+                return {k: sanitize_for_json(v) for k, v in obj.items()}
+            elif isinstance(obj, list):
+                return [sanitize_for_json(item) for item in obj]
+            return obj
+
+        # 응답 전에 데이터 정리
+        processed_data = sanitize_for_json(processed_data)
         
         return AnalyzeQueryResponse(
             success=True,
@@ -1203,11 +1233,25 @@ def calculate_correlation_analysis(x_data: List[float], y_data: List[float]) -> 
         import warnings
         warnings.filterwarnings('ignore')
         
+        # numpy 타입을 Python 기본 타입으로 변환하는 헬퍼 함수
+        def convert_numpy_types(value):
+            if isinstance(value, (np.integer, np.floating, np.bool_)):
+                return value.item()
+            elif isinstance(value, np.ndarray):
+                return value.tolist()
+            elif hasattr(value, 'dtype'):
+                return value.item()
+            return value
+        
         # 1. 스피어만 순위 상관계수 (비모수적, 단조성 관계 측정)
         spearman_corr, spearman_p = stats.spearmanr(x_data, y_data)
+        spearman_corr = convert_numpy_types(spearman_corr)
+        spearman_p = convert_numpy_types(spearman_p)
         
         # 2. 켄달 타우 (순위 기반, 작은 표본에 적합)
         kendall_corr, kendall_p = stats.kendalltau(x_data, y_data)
+        kendall_corr = convert_numpy_types(kendall_corr)
+        kendall_p = convert_numpy_types(kendall_p)
         
         # 3. 포아송 회귀 분석 (카운트 데이터에 적합)
         poisson_result = None
@@ -1234,8 +1278,8 @@ def calculate_correlation_analysis(x_data: List[float], y_data: List[float]) -> 
             if result.success:
                 beta0, beta1 = result.x
                 poisson_result = {
-                    "coefficient": beta1,
-                    "significant": abs(beta1) > 0.1,  # 간단한 기준
+                    "coefficient": convert_numpy_types(beta1),
+                    "significant": bool(abs(beta1) > 0.1),  # numpy.bool_ 방지
                     "interpretation": "양의 관계" if beta1 > 0 else "음의 관계" if beta1 < 0 else "관계 없음"
                 }
         except:
@@ -1243,6 +1287,11 @@ def calculate_correlation_analysis(x_data: List[float], y_data: List[float]) -> 
         
         # 4. 단순 선형 회귀 (비교용)
         slope, intercept, r_value, p_value, std_err = stats.linregress(x_data, y_data)
+        slope = convert_numpy_types(slope)
+        intercept = convert_numpy_types(intercept)
+        r_value = convert_numpy_types(r_value)
+        p_value = convert_numpy_types(p_value)
+        std_err = convert_numpy_types(std_err)
         
         # 결과 해석
         primary_method = "spearman"
@@ -1279,17 +1328,17 @@ def calculate_correlation_analysis(x_data: List[float], y_data: List[float]) -> 
             "method": "다중 방법 분석",
             "primary": {
                 "name": "스피어만 순위 상관",
-                "coefficient": round(primary_coeff, 4),
-                "p_value": round(primary_p, 4),
+                "coefficient": round(float(primary_coeff), 4),
+                "p_value": round(float(primary_p), 4),
                 "strength": strength,
                 "direction": direction,
                 "significance": significance
             },
             "secondary": {
-                "kendall_tau": round(kendall_corr, 4),
-                "kendall_p": round(kendall_p, 4),
-                "linear_r": round(r_value, 4),
-                "linear_p": round(p_value, 4)
+                "kendall_tau": round(float(kendall_corr), 4),
+                "kendall_p": round(float(kendall_p), 4),
+                "linear_r": round(float(r_value), 4),
+                "linear_p": round(float(p_value), 4)
             },
             "poisson_regression": poisson_result,
             "interpretation": interpretation.strip(),
@@ -1306,7 +1355,6 @@ def calculate_correlation_analysis(x_data: List[float], y_data: List[float]) -> 
             "result": f"분석 중 오류 발생: {str(e)}",
             "interpretation": "통계 분석을 수행할 수 없습니다."
         }
-
 
 @app.post("/api/query/execute", response_model=QueryResponse)
 async def execute_sparql_query(request: QueryRequest):

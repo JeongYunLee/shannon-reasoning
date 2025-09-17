@@ -362,6 +362,7 @@
             </div>
           </div>
         </div>
+
         <!-- 2. Visualization Section -->
         <div class="bg-white rounded-2xl shadow-lg border border-gray-200/60 overflow-hidden">
           <div class="px-6 lg:px-8 py-6 border-b border-gray-100">
@@ -370,7 +371,7 @@
                 <span class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg text-sm font-bold flex items-center justify-center mr-3">2</span>
                 <span v-if="shouldShowMap">충전소 위치 지도</span>
                 <span v-else-if="result.queryType === 3">복지 취약성 분석</span>  
-                <span v-else-if="shouldShowAdvancedChart">소득과 충전소 상관관계 분석</span>
+                <span v-else-if="result.queryType === 4">소득과 충전소 상관관계 분석</span>
                 <span v-else>데이터 시각화</span>
               </h3>
               
@@ -409,45 +410,71 @@
             </div>
             
             <!-- Welfare Analysis Charts for Query 3 -->
-            <div v-else-if="result.queryType === 3" class="h-96 relative">
+            <div v-else-if="result.queryType === 3" class="h-[500px] relative">
+              <!-- 데이터 없음 안내 -->
+              <div v-if="!hasWelfareChartData" class="flex items-center justify-center h-full">
+                <div class="text-gray-400 text-base">시각화할 데이터가 없습니다.</div>
+              </div>
               <!-- Line Chart for Regional Status -->
-              <div v-if="welfareChartType === 'line'" class="h-full">
-                <canvas ref="welfareLineChart"></canvas>
+              <div v-else class="h-full w-full flex flex-col">
+                <div :class="{ 'hidden': welfareChartType !== 'line' }" class="h-full w-full flex-1">
+                  <canvas ref="welfareLineChart" style="width:100%;height:100%;display:block;"></canvas>
+                </div>
+                <!-- Bar Chart for Comprehensive Score -->
+                <div :class="{ 'hidden': welfareChartType !== 'bar' }" class="h-full w-full flex-1">
+                  <canvas ref="welfareBarChart" style="width:100%;height:100%;display:block;"></canvas>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Scatter Chart for Query 4 -->
+            <div v-else-if="shouldShowScatterChart" class="h-[500px] relative">
+              <!-- 로딩 중일 때 스켈레톤 표시 -->
+              <div v-if="loading" class="bg-gray-100 rounded-xl p-4 animate-pulse">
+                <div class="h-6 bg-gray-200 rounded mb-4"></div>
+                <div class="h-80 bg-gray-200 rounded"></div>
               </div>
               
-              <!-- Bar Chart for Comprehensive Score -->
-              <div v-else-if="welfareChartType === 'bar'" class="h-full">
-                <canvas ref="welfareBarChart"></canvas>
+              <!-- 실제 산점도 차트 -->
+              <div v-else class="relative w-full h-[500px]">
+                <canvas ref="chartCanvas" style="width:100%;height:100%"></canvas>
               </div>
             </div>
             
-            <!-- Bar Chart for Query 2, 4 -->
-            <div v-else-if="shouldShowBarChart" class="h-[500px] relative">
-              <!-- Query 2: 소득 분포 - 좌우 분리된 차트 -->
-              <div v-if="result.queryType === 2" class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
-                <!-- 상위 10개 지역 -->
-                <div class="bg-gray-50 rounded-xl p-4">
-                  <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">상위 10개 지역</h4>
-                  <div class="h-80">
-                    <canvas ref="topChartCanvas"></canvas>
+            <!-- Bar Chart for Query 2 -->
+            <div v-else-if="shouldShowBarChart" class="h-[400px] relative">
+              <!-- Query 2: 소득 분포 - 로딩 상태 표시 추가 -->
+              <div v-if="result.queryType === 2">
+                <!-- 로딩 중일 때 스켈레톤 표시 -->
+                <div v-if="loading" class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
+                  <div class="bg-gray-100 rounded-xl p-4 animate-pulse">
+                    <div class="h-6 bg-gray-200 rounded mb-4"></div>
+                    <div class="h-80 bg-gray-200 rounded"></div>
+                  </div>
+                  <div class="bg-gray-100 rounded-xl p-4 animate-pulse">
+                    <div class="h-6 bg-gray-200 rounded mb-4"></div>
+                    <div class="h-80 bg-gray-200 rounded"></div>
                   </div>
                 </div>
-                <!-- 하위 10개 지역 -->
-                <div class="bg-gray-50 rounded-xl p-4">
-                  <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">하위 10개 지역</h4>
-                  <div class="h-80">
-                    <canvas ref="bottomChartCanvas"></canvas>
+                
+                <!-- 실제 차트 -->
+                <div v-else class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-full">
+                  <div class="bg-gray-50 rounded-xl p-4">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">상위 10개 지역</h4>
+                    <div class="h-80">
+                      <canvas ref="topChartCanvas" style="width:100%;height:100%"></canvas>
+                    </div>
+                  </div>
+                  <div class="bg-gray-50 rounded-xl p-4">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">하위 10개 지역</h4>
+                    <div class="h-80">
+                      <canvas ref="bottomChartCanvas" style="width:100%;height:100%"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- Query 4: 일반 바 차트 -->
-              <div v-else>
-                <div class="relative w-full h-[500px]">
-                  <canvas ref="chartCanvas" style="width:100%;height:100%"></canvas>
-                </div>
-              </div>
+              
             </div>
-            
             <!-- Pie Chart for Query 3 (legacy) -->
             <div v-else-if="shouldShowPieChart" class="h-96 relative">
               <canvas ref="pieChartCanvas"></canvas>
@@ -706,6 +733,14 @@
 
 <script setup>
 import { ref, computed, nextTick, watch, onUnmounted, onMounted } from 'vue'
+// 복지 차트 데이터 존재 여부
+const hasWelfareChartData = computed(() => {
+  if (result.value?.queryType !== 3) return false
+  const regions = result.value?.data?.welfare_analysis?.regions
+  if (regions && Array.isArray(regions) && regions.length > 0) return true
+  if (result.value?.results && Array.isArray(result.value.results) && result.value.results.length > 0) return true
+  return false
+})
 
 const userQuery = ref('')
 const result = ref(null)
@@ -741,7 +776,7 @@ let currentMap = null
 let currentTileLayer = null
 const currentMapStyle = ref('openstreetmap')
 
-// const API_BASE_URL = 'http://localhost:8000/api'
+// const API_BASE_URL = 'http://localhost:8001/api'
 
 const config = useRuntimeConfig()
 const API_BASE_URL = config.public.apiUrl
@@ -850,11 +885,18 @@ const shouldShowMap = computed(() => {
 })
 
 const shouldShowBarChart = computed(() => {
-  return result.value?.queryType && [2, 4].includes(result.value.queryType) && result.value.results?.length > 0
+  // queryType만 확인하고, 로딩 중이거나 결과가 있으면 표시
+  return result.value?.queryType && [2].includes(result.value.queryType) && 
+         (loading.value || (result.value.results?.length > 0))
 })
 
 const shouldShowAdvancedChart = computed(() => {
   return result.value?.queryType === 4 && result.value.data?.districts?.length > 0
+})
+
+const shouldShowScatterChart = computed(() => {
+  return result.value?.queryType === 4 && 
+         (loading.value || (result.value.data?.districts?.length > 0))
 })
 
 const shouldShowPieChart = computed(() => {
@@ -946,7 +988,21 @@ const executeQuery = async () => {
     }
 
     if (data.success && data.results?.length) {
-      await nextTick()
+      // Query2의 경우 특별한 처리
+      if (data.queryType === 2) {
+        console.log('Query2 detected, preparing for chart rendering...')
+        
+        // DOM 업데이트 대기
+        await nextTick()
+        
+        // 추가 안정화 대기
+        await new Promise(resolve => setTimeout(resolve, 400))
+        
+        console.log('Starting chart drawing for Query2...')
+      } else {
+        await nextTick()
+      }
+      
       await drawChart()
     }
     
@@ -960,6 +1016,30 @@ const executeQuery = async () => {
     loading.value = false
     complexReasoningProgress.value.isActive = false
   }
+}
+
+
+const debugCanvasState = () => {
+  console.log('=== Canvas Debug Info ===')
+  console.log('shouldShowBarChart:', shouldShowBarChart.value)
+  console.log('topChartCanvas exists:', !!topChartCanvas.value)
+  console.log('bottomChartCanvas exists:', !!bottomChartCanvas.value)
+  
+  if (topChartCanvas.value) {
+    const topRect = topChartCanvas.value.getBoundingClientRect()
+    console.log('topCanvas size:', topRect.width, 'x', topRect.height)
+    console.log('topCanvas connected:', topChartCanvas.value.isConnected)
+  }
+  
+  if (bottomChartCanvas.value) {
+    const bottomRect = bottomChartCanvas.value.getBoundingClientRect()
+    console.log('bottomCanvas size:', bottomRect.width, 'x', bottomRect.height)
+    console.log('bottomCanvas connected:', bottomChartCanvas.value.isConnected)
+  }
+  
+  console.log('currentTopChart:', !!currentTopChart)
+  console.log('currentBottomChart:', !!currentBottomChart)
+  console.log('========================')
 }
 
 const executeAdvancedQuery = async () => {
@@ -1232,46 +1312,142 @@ const destroyCharts = () => {
   currentTileLayer = null
 }
 
+// 4. drawChart 함수에서 query2 특별 처리
 const drawChart = async () => {
-  if (!result.value?.results?.length) return
+  if (!result.value?.results?.length) {
+    console.log('No results available for chart drawing')
+    return
+  }
 
   try {
     const queryType = result.value.queryType
+    console.log(`Drawing chart for queryType: ${queryType}`)
 
     if (queryType === 1 && shouldShowMap.value) {
       await drawMap()
+    } else if (queryType === 2) {
+      // Query2의 경우 더 신중한 처리
+      console.log('Preparing for Query2 income charts...')
+      
+      const { Chart, registerables } = await import('chart.js')
+      Chart.register(...registerables)
+      
+      // DOM 완전 준비 대기 (더 길게)
+      await nextTick()
+      await new Promise(resolve => setTimeout(resolve, 300))
+      
+      // shouldShowBarChart가 true인지 재확인
+      if (!shouldShowBarChart.value) {
+        console.log('Bar chart should not be shown, skipping...')
+        return
+      }
+      
+      await drawIncomeCharts(Chart)
+      
     } else if (queryType === 3) {
       const { Chart, registerables } = await import('chart.js')
       Chart.register(...registerables)
+      
+      // DOM 업데이트 대기
+      await nextTick()
+      await new Promise(resolve => setTimeout(resolve, 300))
+      
       await drawWelfareCharts(Chart)
     } else if (queryType === 4) {
-      // Query 4: 소득-충전소 상관관계 산점도
       const { Chart, registerables } = await import('chart.js')
       Chart.register(...registerables)
-      await drawScatterChart(Chart)  // 산점도 사용
-    } else if (queryType === 2) {
-      const { Chart, registerables } = await import('chart.js')
-      Chart.register(...registerables)
-      await drawIncomeCharts(Chart)
+      await drawScatterChart(Chart)
     }
   } catch (error) {
     console.error('Chart drawing error:', error)
+    
+    // 한 번만 재시도
+    if (!error.retried && result.value?.queryType === 2) {
+      error.retried = true
+      console.log('Retrying chart drawing in 1 second...')
+      setTimeout(() => drawChart(), 1000)
+    }
   }
 }
 
-// 복지 분석용 차트 그리기 함수
-const drawWelfareCharts = async (Chart) => {
-  if (!result.value?.results?.length) return
+// 복지 분석용 차트 그리기 함수 (진단 로그 추가)
+const drawWelfareCharts = async (Chart, retryCount = 0) => {
+  if (result.value?.queryType !== 3) {
+    console.log(`복지 차트는 query3에서만 그립니다. 현재 queryType: ${result.value?.queryType}`)
+    return
+  }
 
-  // 두 차트 모두 그리기
-  await drawWelfareLineChart(Chart)
-  await drawWelfareBarChart(Chart)
+  // 데이터 존재 여부 진단
+  const regions = result.value?.data?.welfare_analysis?.regions
+  const fallbackResults = result.value?.results
+  console.log('[drawWelfareCharts] 데이터 진단:', {
+    regionsType: typeof regions,
+    regionsLen: Array.isArray(regions) ? regions.length : 'N/A',
+    fallbackResultsLen: Array.isArray(fallbackResults) ? fallbackResults.length : 'N/A',
+    welfareLineChartRef: !!welfareLineChart.value,
+    welfareBarChartRef: !!welfareBarChart.value,
+    welfareChartType: welfareChartType.value
+  })
+
+  if (!hasWelfareChartData.value) {
+    console.warn('[drawWelfareCharts] 시각화할 데이터가 없습니다.')
+    return
+  }
+
+  try {
+    // DOM이 완전히 준비될 때까지 대기
+    await nextTick()
+    await new Promise(resolve => setTimeout(resolve, 200))
+    // welfareChartType에 따라 해당 차트만 그리기
+    if (welfareChartType.value === 'line') {
+      await drawWelfareLineChart(Chart)
+    } else if (welfareChartType.value === 'bar') {
+      await drawWelfareBarChart(Chart)
+    } else {
+      // 혹시 모를 확장 대비
+      await drawWelfareLineChart(Chart)
+      await new Promise(resolve => setTimeout(resolve, 100))
+      await drawWelfareBarChart(Chart)
+    }
+  } catch (error) {
+    console.error('복지 차트 그리기 오류:', error)
+    // 재시도 로직 (최대 2번)
+    if (retryCount < 2) {
+      console.log(`복지 차트 재시도 중... (${retryCount + 1}/2)`)
+      await new Promise(resolve => setTimeout(resolve, 500))
+      await drawWelfareCharts(Chart, retryCount + 1)
+    }
+  }
 }
+
+// welfareChartType이 바뀔 때마다 차트 다시 그림
+watch(welfareChartType, async (newType, oldType) => {
+  if (result.value?.queryType === 3 && hasWelfareChartData.value) {
+    const { Chart, registerables } = await import('chart.js')
+    Chart.register(...registerables)
+    await nextTick()
+    await drawWelfareCharts(Chart)
+  }
+})
 
 // 복지 지역별 현황 라인 차트
 const drawWelfareLineChart = async (Chart) => {
+  // query3에서만 실행되도록 제한
+  if (result.value?.queryType !== 3) {
+    console.log('welfareLineChart는 query3에서만 그립니다.')
+    return
+  }
+
+  // Canvas ref가 존재하는지 먼저 확인
   if (!welfareLineChart.value) {
-    console.warn('welfareLineChart ref가 없습니다')
+    console.warn('welfareLineChart ref가 존재하지 않습니다. DOM에 렌더링되지 않았을 수 있습니다.')
+    return
+  }
+
+  // Canvas 준비 상태 확인
+  const canvasReady = await waitForCanvasReady(welfareLineChart, 'WelfareLineChart')
+  if (!canvasReady) {
+    console.warn('welfareLineChart canvas가 준비되지 않았습니다')
     return
   }
 
@@ -1459,8 +1635,22 @@ const drawWelfareLineChart = async (Chart) => {
 
 // drawWelfareBarChart 함수 수정 (기존 함수 교체)
 const drawWelfareBarChart = async (Chart) => {
+  // query3에서만 실행되도록 제한
+  if (result.value?.queryType !== 3) {
+    console.log('welfareBarChart는 query3에서만 그립니다.')
+    return
+  }
+
+  // Canvas ref가 존재하는지 먼저 확인
   if (!welfareBarChart.value) {
-    console.warn('welfareBarChart ref가 없습니다')
+    console.warn('welfareBarChart ref가 존재하지 않습니다. DOM에 렌더링되지 않았을 수 있습니다.')
+    return
+  }
+
+  // Canvas 준비 상태 확인
+  const canvasReady = await waitForCanvasReady(welfareBarChart, 'WelfareBarChart')
+  if (!canvasReady) {
+    console.warn('welfareBarChart canvas가 준비되지 않았습니다')
     return
   }
 
@@ -1655,7 +1845,7 @@ const drawAdvancedChart = async (Chart) => {
     })
     
     const incomes = topDistricts.map(d => d.income || 0)
-    const stations = topDistricts.map(d => d.chargingStations || 0)
+    const stations = topDistricts.map(d => d.chargerCount || 0)
     
     console.log('고급 분석 차트 데이터:', {
       labels: labels.length,
@@ -1800,11 +1990,135 @@ const drawAdvancedChart = async (Chart) => {
   }
 }
 
-// 소득 분포 차트 그리기 (상위 10개, 하위 10개 분리)
-const drawIncomeCharts = async (Chart) => {
-  if (!result.value?.results?.length) return
+// 2. Canvas 존재 및 준비 상태 확인 개선
+const waitForCanvasReady = async (canvasRef, refName, maxAttempts = 20) => {
+  let attempts = 0
+  
+  console.log(`waitForCanvasReady 시작: ${refName}, 현재 queryType: ${result.value?.queryType}`)
+  
+  while (attempts < maxAttempts) {
+    // 1단계: ref가 존재하는지 확인
+    if (!canvasRef.value) {
+      console.log(`${refName}: Canvas ref not found (attempt ${attempts + 1})`)
+      await new Promise(resolve => setTimeout(resolve, 150))
+      attempts++
+      continue
+    }
+    
+    // 2단계: DOM에 실제로 마운트되었는지 확인
+    if (!canvasRef.value.isConnected) {
+      console.log(`${refName}: Canvas not connected to DOM (attempt ${attempts + 1})`)
+      await new Promise(resolve => setTimeout(resolve, 100))
+      attempts++
+      continue
+    }
+    
+    // 3단계: 크기가 설정되었는지 확인
+    const rect = canvasRef.value.getBoundingClientRect()
+    if (rect.width === 0 || rect.height === 0) {
+      console.log(`${refName}: Canvas size not ready: ${rect.width}x${rect.height} (attempt ${attempts + 1})`)
+      await new Promise(resolve => setTimeout(resolve, 100))
+      attempts++
+      continue
+    }
+    
+    // 4단계: getContext가 가능한지 확인
+    try {
+      const ctx = canvasRef.value.getContext('2d')
+      if (!ctx) {
+        console.log(`${refName}: Cannot get 2D context (attempt ${attempts + 1})`)
+        await new Promise(resolve => setTimeout(resolve, 100))
+        attempts++
+        continue
+      }
+    } catch (error) {
+      console.log(`${refName}: Context error: ${error.message} (attempt ${attempts + 1})`)
+      await new Promise(resolve => setTimeout(resolve, 100))
+      attempts++
+      continue
+    }
+    
+    // 5단계: 추가 안정화 대기
+    await new Promise(resolve => setTimeout(resolve, 50))
+    
+    console.log(`${refName}: Canvas ready after ${attempts + 1} attempts`)
+    return true
+  }
+  
+  console.error(`${refName}: Canvas not ready after ${maxAttempts} attempts`)
+  return false
+}
 
-  // 기존 차트 정리
+
+// 소득 분포 차트 그리기 (상위 10개, 하위 10개 분리)
+// 2. 개선된 소득 차트 그리기 함수
+const drawIncomeCharts = async (Chart) => {
+  if (!result.value?.results?.length) {
+    console.log('No results available for income charts')
+    return
+  }
+
+  console.log('Starting income charts creation...')
+
+  try {
+    // 기존 차트 정리
+    await destroyIncomeChartsAndWait()
+    
+    // 데이터 준비
+    const chartData = prepareIncomeChartData()
+    if (!chartData) {
+      console.error('Failed to prepare chart data')
+      return
+    }
+    
+    console.log('Chart data prepared:', {
+      topRegions: chartData.topRegions.length,
+      bottomRegions: chartData.bottomRegions.length,
+      yAxisMax: chartData.yAxisMax
+    })
+    
+    // Canvas 요소들이 준비될 때까지 대기
+    const topReady = await waitForCanvasReady(topChartCanvas, 'TopChart')
+    const bottomReady = await waitForCanvasReady(bottomChartCanvas, 'BottomChart')
+    
+    if (!topReady || !bottomReady) {
+      console.error('Canvas elements not ready for chart creation')
+      
+      // 재시도 로직
+      console.log('Attempting retry in 500ms...')
+      setTimeout(() => {
+        if (result.value?.results?.length && shouldShowBarChart.value) {
+          drawIncomeCharts(Chart)
+        }
+      }, 500)
+      return
+    }
+
+    console.log('Both canvas elements ready, creating charts...')
+    
+    // 차트 생성을 순차적으로 처리
+    await createTopChart(Chart, chartData)
+    await new Promise(resolve => setTimeout(resolve, 100))
+    await createBottomChart(Chart, chartData)
+    
+    console.log('Income charts created successfully')
+    
+  } catch (error) {
+    console.error('Income charts creation error:', error)
+    
+    // 에러 발생 시 재시도
+    setTimeout(() => {
+      if (result.value?.results?.length && shouldShowBarChart.value) {
+        console.log('Retrying chart creation after error...')
+        drawIncomeCharts(Chart)
+      }
+    }, 1000)
+  }
+}
+
+
+// 3. 차트 정리 및 대기 함수
+const destroyIncomeChartsAndWait = async () => {
   if (currentTopChart) {
     currentTopChart.destroy()
     currentTopChart = null
@@ -1813,183 +2127,204 @@ const drawIncomeCharts = async (Chart) => {
     currentBottomChart.destroy()
     currentBottomChart = null
   }
+  
+  // DOM 정리 완료를 위한 대기
+  await new Promise(resolve => setTimeout(resolve, 150))
+}
 
+// 4. 데이터 준비 함수 분리
+const prepareIncomeChartData = () => {
   try {
-    // 소득 데이터 정렬
     const sortedData = result.value.results
       .map(r => ({
         region: r.지역명 || '알 수 없음',
         income: parseInt(r.평균소득 || r.income || 0) || 0
       }))
+      .filter(d => d.income > 0) // 유효한 데이터만
       .sort((a, b) => b.income - a.income)
 
-    // 전체 데이터에서 최댓값 찾기
+    if (sortedData.length === 0) {
+      console.warn('No valid income data available')
+      return null
+    }
+
     const maxIncome = Math.max(...sortedData.map(d => d.income))
-    // 여유 공간을 위해 10% 추가
     const yAxisMax = Math.ceil(maxIncome * 1.1)
 
-    // 상위 10개와 하위 10개 선택
     const topRegions = sortedData.slice(0, 10)
-    const bottomRegions = sortedData.slice(-10).reverse() // 역순으로 정렬하여 가장 낮은 것부터
+    const bottomRegions = sortedData.slice(-10).reverse()
 
-    // 공통 y축 설정 옵션
-    const yAxisOptions = {
+    return {
+      topRegions,
+      bottomRegions,
+      yAxisMax,
+      totalDataPoints: sortedData.length
+    }
+  } catch (error) {
+    console.error('Data preparation error:', error)
+    return null
+  }
+}
+
+// 5. 상위 차트 생성 함수
+const createTopChart = async (Chart, chartData) => {
+  if (!topChartCanvas.value) return
+
+  const ctx = topChartCanvas.value.getContext('2d')
+  if (!ctx) {
+    console.error('Failed to get 2D context for top chart')
+    return
+  }
+
+  // Context 상태 확인
+  ctx.clearRect(0, 0, topChartCanvas.value.width, topChartCanvas.value.height)
+
+  const commonOptions = getCommonChartOptions(chartData.yAxisMax)
+
+  currentTopChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: chartData.topRegions.map(d => {
+        const name = d.region
+        return name.length > 8 ? name.substring(0, 8) + '...' : name
+      }),
+      datasets: [{
+        label: '평균소득 (만원)',
+        data: chartData.topRegions.map(d => d.income),
+        backgroundColor: '#10B981',
+        borderRadius: 8,
+        borderColor: '#ffffff',
+        borderWidth: 2,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      ...commonOptions,
+      plugins: {
+        ...commonOptions.plugins,
+        title: {
+          display: false
+        }
+      }
+    }
+  })
+
+  console.log('Top chart created successfully')
+}
+
+// 6. 하위 차트 생성 함수
+const createBottomChart = async (Chart, chartData) => {
+  if (!bottomChartCanvas.value) return
+
+  const ctx = bottomChartCanvas.value.getContext('2d')
+  if (!ctx) {
+    console.error('Failed to get 2D context for bottom chart')
+    return
+  }
+
+  // Context 상태 확인
+  ctx.clearRect(0, 0, bottomChartCanvas.value.width, bottomChartCanvas.value.height)
+
+  const commonOptions = getCommonChartOptions(chartData.yAxisMax)
+
+  currentBottomChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: chartData.bottomRegions.map(d => {
+        const name = d.region
+        return name.length > 8 ? name.substring(0, 8) + '...' : name
+      }),
+      datasets: [{
+        label: '평균소득 (만원)',
+        data: chartData.bottomRegions.map(d => d.income),
+        backgroundColor: '#F59E0B',
+        borderRadius: 8,
+        borderColor: '#ffffff',
+        borderWidth: 2,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      ...commonOptions,
+      plugins: {
+        ...commonOptions.plugins,
+        title: {
+          display: false
+        }
+      }
+    }
+  })
+
+  console.log('Bottom chart created successfully')
+}
+
+// 7. 공통 차트 옵션
+const getCommonChartOptions = (yAxisMax) => ({
+  responsive: true,
+  maintainAspectRatio: false,
+  animation: {
+    duration: 1000,
+    easing: 'easeOutCubic'
+  },
+  plugins: {
+    legend: {
+      display: false
+    },
+    tooltip: {
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      titleColor: '#ffffff',
+      bodyColor: '#ffffff',
+      borderColor: '#374151',
+      borderWidth: 1,
+      cornerRadius: 8,
+      callbacks: {
+        label: function(context) {
+          return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}만원`
+        }
+      }
+    }
+  },
+  scales: {
+    y: {
       beginAtZero: true,
-      max: yAxisMax, // 동일한 최댓값 설정
+      max: yAxisMax,
       grid: {
         color: '#F3F4F6',
         drawBorder: false
       },
       ticks: {
         color: '#6B7280',
-        font: {
-          size: 11
-        },
+        font: { size: 11 },
         callback: function(value) {
           return value.toLocaleString() + '만원'
         }
       }
+    },
+    x: {
+      grid: { display: false },
+      ticks: {
+        color: '#6B7280',
+        font: { size: 10 },
+        maxRotation: 45,
+        minRotation: 0
+      }
     }
-
-    // 상위 10개 차트
-    if (topChartCanvas.value) {
-      const topCtx = topChartCanvas.value.getContext('2d')
-      
-      currentTopChart = new Chart(topCtx, {
-        type: 'bar',
-        data: {
-          labels: topRegions.map(d => {
-            const name = d.region
-            return name.length > 8 ? name.substring(0, 8) + '...' : name
-          }),
-          datasets: [{
-            label: '평균소득 (만원)',
-            data: topRegions.map(d => d.income),
-            backgroundColor: '#10B981', // Emerald-500
-            borderRadius: 8,
-            borderColor: '#ffffff',
-            borderWidth: 2,
-            borderSkipped: false,
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-              backgroundColor: 'rgba(0, 0, 0, 0.8)',
-              titleColor: '#ffffff',
-              bodyColor: '#ffffff',
-              borderColor: '#374151',
-              borderWidth: 1,
-              cornerRadius: 8,
-              callbacks: {
-                label: function(context) {
-                  return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}만원`
-                }
-              }
-            }
-          },
-          scales: {
-            y: yAxisOptions, // 공통 y축 옵션 적용
-            x: {
-              grid: {
-                display: false
-              },
-              ticks: {
-                color: '#6B7280',
-                font: {
-                  size: 10
-                },
-                maxRotation: 45,
-                minRotation: 0
-              }
-            }
-          },
-          interaction: {
-            intersect: false,
-            mode: 'index'
-          }
-        }
-      })
-    }
-
-    // 하위 10개 차트
-    if (bottomChartCanvas.value) {
-      const bottomCtx = bottomChartCanvas.value.getContext('2d')
-      
-      currentBottomChart = new Chart(bottomCtx, {
-        type: 'bar',
-        data: {
-          labels: bottomRegions.map(d => {
-            const name = d.region
-            return name.length > 8 ? name.substring(0, 8) + '...' : name
-          }),
-          datasets: [{
-            label: '평균소득 (만원)',
-            data: bottomRegions.map(d => d.income),
-            backgroundColor: '#F59E0B', // Amber-500
-            borderRadius: 8,
-            borderColor: '#ffffff',
-            borderWidth: 2,
-            borderSkipped: false,
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-              backgroundColor: 'rgba(0, 0, 0, 0.8)',
-              titleColor: '#ffffff',
-              bodyColor: '#ffffff',
-              borderColor: '#374151',
-              borderWidth: 1,
-              cornerRadius: 8,
-              callbacks: {
-                label: function(context) {
-                  return `${context.dataset.label}: ${context.parsed.y.toLocaleString()}만원`
-                }
-              }
-            }
-          },
-          scales: {
-            y: yAxisOptions, // 공통 y축 옵션 적용
-            x: {
-              grid: {
-                display: false
-              },
-              ticks: {
-                color: '#6B7280',
-                font: {
-                  size: 10
-                },
-                maxRotation: 45,
-                minRotation: 0
-              }
-            }
-          },
-          interaction: {
-            intersect: false,
-            mode: 'index'
-          }
-        }
-      })
-    }
-
-  } catch (error) {
-    console.error('Income charts creation error:', error)
+  },
+  interaction: {
+    intersect: false,
+    mode: 'index'
   }
-}
+})
+
 
 // query4 산점도 차트
 const drawScatterChart = async (Chart) => {
+  // query4에서만 실행되도록 제한
+  if (result.value?.queryType !== 4) {
+    console.log('scatterChart는 query4에서만 그립니다.')
+    return
+  }
+
   if (!chartCanvas.value) {
     console.warn('chartCanvas ref가 없습니다')
     return
@@ -2022,7 +2357,7 @@ const drawScatterChart = async (Chart) => {
     // 산점도 데이터 포인트 생성
     const scatterData = districts.map(d => ({
       x: d.income || 0,           // X축: 소득
-      y: d.chargerCount || 0,     // Y축: 충전소 수 (수정됨!)
+      y: d.chargerCount || 0,     // Y축: 충전소 수 (백엔드 필드명과 일치)
       label: d.name || '알 수 없음'
     })).filter(point => point.x > 0 && point.y > 0) // 유효한 데이터만
 
@@ -2200,6 +2535,14 @@ watch(() => result.value?.results, async (newResults) => {
   if (newResults?.length) {
     await nextTick()
     await drawChart()
+  }
+})
+
+// 복지 차트 타입이 변경될 때마다 차트 다시 그리기
+watch(() => welfareChartType.value, async (newType) => {
+  if (result.value?.queryType === 3 && result.value?.results?.length) {
+    // 차트가 이미 그려져 있으므로 타입 변경만 처리
+    console.log(`복지 차트 타입 변경: ${newType}`)
   }
 })
 
