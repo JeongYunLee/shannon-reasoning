@@ -158,7 +158,7 @@ origins = [
     "http://127.0.0.1:3000",
     "http://127.0.0.1",
     "http://localhost/projects/shannon-insight",  # 추가
-    "http://localhost:80/projects/shannon-insight",  # 추가
+    "http://localhost:82/projects/shannon-insight",  # 추가
     "http://labs.datahub.kr",
     "https://labs.datahub.kr"
     "165.194.115.110",
